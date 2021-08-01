@@ -6,6 +6,7 @@
     background-color: #181818!important;
     position: fixed;
     left: 0;
+    z-index: 5;
 }
 .brand_image{
     width: 20px;
@@ -39,6 +40,7 @@ li.nav-item{
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 500;
 }
 li.nav-item:hover .sidebar_icon{
     display: none;

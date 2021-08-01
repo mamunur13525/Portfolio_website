@@ -2,12 +2,12 @@ import React from "react";
 import Sidebar from "./Share/Sidebar";
 import "./Home.css";
 import logo from '../image/logo.PNG';
+import PageLoading from "./Share/PageLoading";
 const Home = () => {
   return (
     <div className="home_page">
+      <PageLoading />
       <Sidebar />
-
-    
           <div className="start_tag_box">
             
           <p className="body_tag">&lt;body&gt;</p>

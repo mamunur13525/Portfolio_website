@@ -36,7 +36,7 @@ const Sidebar = () => {
             </li>
             <li className="nav-item">
                 <PersonOutlineIcon className="sidebar_icon"/>
-              <Link className="nav-link" to="/home">About</Link>
+              <Link className="nav-link" to="/about">About</Link>
             </li>
             <li className="nav-item">
             <SettingsOutlinedIcon className="sidebar_icon" />

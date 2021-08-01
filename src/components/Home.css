@@ -2,14 +2,14 @@
   width: 94%;
   margin-left: auto;
   margin-right: 0;
+  position: relative;
 }
 .home_page {
   background-color: #022c43;
   height: 100vh;
+  position: relative;
 }
-.home_left_side {
-  padding-left: 5rem;
-}
+
 .body_tag,
 .h1_tag {
   color: gray;
@@ -19,15 +19,16 @@
 }
 .main_heading_title {
   color: white;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 0rem;
 }
 .sub_title {
   color: gray;
   letter-spacing: 3px;
-  font-size: 12px;
+  font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
+  width: 45%;
 }
 .contactMeBtn {
   background: none;
@@ -41,4 +42,32 @@
 .contactMeBtn:hover {
   color: black;
   background-color: yellow;
+}
+.start_tag_box {
+  position: absolute;
+  top: 3%;
+  left: 7%;
+}
+.home_main_text {
+  position: absolute;
+  left: 10%;
+  top: 15%;
+  width: 70%;
+}
+
+.end_tag_box {
+  position: absolute;
+  bottom: 6%;
+  left: 6%;
+}
+.home_logo {
+  position: absolute;
+  right: 10%;
+  top: 19%;
+  width: 33%;
+  /* height: 40%; */
+  transform: rotate(2deg);
+}
+.home_logo img {
+  width: 100%;
 }

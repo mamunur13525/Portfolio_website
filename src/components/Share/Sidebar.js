@@ -13,12 +13,13 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import TwitterIcon from '@material-ui/icons/Twitter';
+import logo from '../../image/logo.PNG'
 
 const Sidebar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <Link to="/home" className="navbar-brand text-light">
-            <img className="brand_image" src="https://bobangajicsm.github.io/portfolio/assets/images/logo-s.png" alt="" />
+            <img className="brand_image" src={logo} alt="logo" />
            <span>
            Mamun 
                </span> 

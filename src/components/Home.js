@@ -1,16 +1,21 @@
 import React from "react";
 import Sidebar from "./Share/Sidebar";
 import "./Home.css";
-
+import logo from '../image/logo.PNG';
 const Home = () => {
   return (
     <div className="home_page">
       <Sidebar />
 
-      <div className="row">
-        <div className="col-md-6 home_left_side">
-          <p className="body_tag my-5">&lt;body&gt;</p>
-          <p className="h1_tag mt-5">&lt;h1&gt;</p>
+    
+          <div className="start_tag_box">
+            
+          <p className="body_tag">&lt;body&gt;</p>
+          
+          </div>
+        <div className='home_main_text'>
+          
+        <p className="h1_tag mt-5">&lt;h1&gt;</p>
           <h1 className="main_heading_title">
             Hi,<br/>
              I'm Mamun Ahmed<br/>              web developer
@@ -18,15 +23,22 @@ const Home = () => {
           </h1>
          
           <p className="sub_title">
-            Front End Developer/Javascript Expert/Freelancer
+            Front End Developer / Javascript Expert / Freelancer
           </p>
-          <button className="contactMeBtn my-5 ">contact me</button>
+          <button className="contactMeBtn mt-4 ">contact me</button>
 
-          <p className="body_tag mt-5">&nbsp;&nbsp;&nbsp; &lt;/body&gt;</p>
-          <p className="body_tag">&lt;/html&gt;</p>
         </div>
-        <div className="col-md-6">logo site</div>
-      </div>
+        <div className="end_tag_box">
+          <p className="body_tag mt-5">&nbsp;&nbsp;&nbsp; &lt;/body&gt;</p>
+            <p className="body_tag">&lt;/html&gt;</p>
+        </div>
+
+        <div className='home_logo'>
+          <img src={logo} alt="logo" />
+        </div>
+       
+       
+      
     </div>
   );
 };

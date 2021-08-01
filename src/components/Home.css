@@ -1,0 +1,44 @@
+.row {
+  width: 94%;
+  margin-left: auto;
+  margin-right: 0;
+}
+.home_page {
+  background-color: #022c43;
+  height: 100vh;
+}
+.home_left_side {
+  padding-left: 5rem;
+}
+.body_tag,
+.h1_tag {
+  color: gray;
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: normal;
+}
+.main_heading_title {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0rem;
+}
+.sub_title {
+  color: gray;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.contactMeBtn {
+  background: none;
+  border: 1px solid yellow;
+  color: yellow;
+  padding: 0.5rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  transition: all 0.5s;
+}
+.contactMeBtn:hover {
+  color: black;
+  background-color: yellow;
+}

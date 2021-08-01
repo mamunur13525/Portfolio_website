@@ -4,6 +4,8 @@
     flex-direction: column;
     justify-content: center;
     background-color: #181818!important;
+    position: fixed;
+    left: 0;
 }
 .brand_image{
     width: 20px;
@@ -96,6 +98,7 @@ ul.social_icon_ul {
         flex-direction: row;
         justify-content: space-between;
          padding: 1rem 1rem;
+         position: static;
     }
     .navbar-nav{
         flex-direction: column;

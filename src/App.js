@@ -7,6 +7,7 @@ import {
 import Home from './components/Home';
 import './App.css';
 import About from './components/About/About';
+import Skills from './components/Skills/Skills';
 function App() {
   
   return (
@@ -21,6 +22,9 @@ function App() {
           </Route>         
           <Route path="/about">
             <About/>
+          </Route>         
+          <Route path="/skills">
+            <Skills/>
           </Route>         
         </Switch>
       </Router>

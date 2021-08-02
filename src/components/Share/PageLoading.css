@@ -3,20 +3,20 @@
     height: 100vh;
     background-color: #022C43;
     position: absolute;
-    left: 0%;
+    transform: translate(-350%);
     top:0%;
-    z-index: 2;
+    z-index: 10;
     display: grid;
     place-content: center;
     transition: all 1s;
 }
 .page_loading_div.open{
-    left: 0%;
+    transform: translate(0%);
     transition: all 1s;
 }
 .page_loading_div.close{
     transition: all 1s;
-    left: -350%;
+    transform: translate(-350%);
 }
 .page_loading_content_box{
     display: flex;
@@ -51,7 +51,7 @@ img.page_load_logo {
     margin: 0 0 20px;
 }
 .progress{
-    height:3px;
+    height:2px;
     background: #333;
     box-shadow: none;
     margin-bottom: 30px;

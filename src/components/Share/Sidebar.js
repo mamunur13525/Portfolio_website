@@ -40,7 +40,7 @@ const Sidebar = () => {
             </li>
             <li className="nav-item">
             <SettingsOutlinedIcon className="sidebar_icon" />
-              <Link className="nav-link" to="/home">Skills</Link>
+              <Link className="nav-link" to="/skills">Skills</Link>
             </li>
             <li className="nav-item">
             <WbIncandescentOutlinedIcon className="sidebar_icon"/>

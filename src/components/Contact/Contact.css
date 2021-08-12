@@ -1,0 +1,59 @@
+.col-md-6.contatct-half {
+  position: relative;
+  height: 100vh;
+}
+.text_contact {
+  color: white;
+}
+input.input_form,
+textarea.input_form {
+  width: 100%;
+  border: none;
+  padding: 0.7rem;
+  background: #115173;
+  color: white;
+}
+input.input_form.name,
+input.input_form.email {
+  width: 100%;
+}
+input.input_form.name {
+  margin-right: 2%;
+}
+input.input_form:focus,
+textarea.input_form:focus {
+  border: none;
+  outline: none;
+}
+textarea.input_form {
+  height: 140px;
+  margin-bottom: 0px;
+}
+.span_input {
+  width: 100%;
+  margin-bottom: .7rem;
+}
+.d-flex .span_input{
+    width: 48%;
+}
+.label_after{
+    width: 100%;
+    margin: 0px;
+    position: relative;
+}
+.label_after::after {
+    content: '';
+    width: 0%;
+    background: red;
+    height: 2px;
+    display: block;
+    position: absolute;
+    top: -19px;
+    left: 0;
+    transition: all .4s;
+}
+
+.input_form:focus +.label_after::after{
+    width: 100%;
+    transition: all .4s;
+}

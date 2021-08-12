@@ -1,0 +1,20 @@
+.icon {
+    display: flex;
+    align-items: center;
+}
+.technology_icon{
+    width: 120px;
+    transition: transform .3s;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+.technology_icon.css{
+    width: 98px;
+}
+.technology_icon.mongodb{
+    width: 130px;
+}
+.technology_icon:hover{
+    transform: scale(1.3);
+
+}

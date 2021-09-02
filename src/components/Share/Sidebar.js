@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./Sidebar.css";
 import HomeIcon from "@material-ui/icons/Home";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
@@ -14,6 +14,7 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import logo from "../../image/logo.PNG";
 
 const Sidebar = () => {
+  const { push } = useHistory();
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link to="/home" className="navbar-brand text-light">
@@ -32,40 +33,50 @@ const Sidebar = () => {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            <HomeIcon className="sidebar_icon" />
-            <Link className="nav-link" to="/home">
-              Home
-            </Link>
+            <div onClick={() => push("/home")} className="icon_name_div">
+              <HomeIcon className="sidebar_icon" />
+              <p className="nav-link">Home</p>
+            </div>
           </li>
           <li className="nav-item">
-            <PersonOutlineIcon className="sidebar_icon" />
-            <Link className="nav-link" to="/about">
-              About
-            </Link>
+            <div onClick={()=>push('/about')} className="icon_name_div">
+              <PersonOutlineIcon className="sidebar_icon" />
+              <p className="nav-link" >
+                About
+              </p>
+            </div>
           </li>
           <li className="nav-item">
-            <SettingsOutlinedIcon className="sidebar_icon" />
-            <Link className="nav-link" to="/skills">
-              Skills
-            </Link>
+            <div onClick={()=>push('/skills')} className="icon_name_div">
+              <SettingsOutlinedIcon className="sidebar_icon" />
+              <p className="nav-link" >
+                Skills
+              </p>
+            </div>
           </li>
           <li className="nav-item">
-            <WbIncandescentOutlinedIcon className="sidebar_icon" />
-            <Link className="nav-link" to="/tips">
-              Tips
-            </Link>
+            <div onClick={()=>push('/tips')} className="icon_name_div">
+              <WbIncandescentOutlinedIcon className="sidebar_icon" />
+              <p className="nav-link" >
+                Tips
+              </p>
+            </div>
           </li>
           <li className="nav-item">
-            <VisibilityOutlinedIcon className="sidebar_icon" />
-            <Link className="nav-link" to="/home">
-              My Works
-            </Link>
+            <div onClick={()=>push('/home')} className="icon_name_div">
+              <VisibilityOutlinedIcon className="sidebar_icon" />
+              <p className="nav-link" >
+                My Works
+              </p>
+            </div>
           </li>
           <li className="nav-item">
-            <EmailOutlinedIcon className="sidebar_icon" />
-            <Link className="nav-link" to="/contact">
-              Contact
-            </Link>
+            <div onClick={()=>push('/contact')} className="icon_name_div">
+              <EmailOutlinedIcon className="sidebar_icon" />
+              <p className="nav-link" >
+                Contact
+              </p>
+            </div>
           </li>
         </ul>
       </div>

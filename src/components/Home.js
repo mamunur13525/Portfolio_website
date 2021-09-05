@@ -15,7 +15,7 @@ const Home = () => {
   } 
 
   return (
-    <div className="home_page ">
+    <div className="home_page home">
       {/* <Particale/> */}
     <PageLoading/>
       <div className="home_main_text ">

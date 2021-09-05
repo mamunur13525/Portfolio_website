@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import TagCanvus from "../../Effect/TagCanvus";
 import PageLoading from "../Share/PageLoading";
 import Sidebar from "../Share/Sidebar";
 import "./Skills.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Skills = () => {
   //Mouse Hover Effect
@@ -12,12 +14,19 @@ const Skills = () => {
       event.target.className = `blast`;
     }, 1000);
   };
+  useEffect(() => {
+    setTimeout(() => {
+      toast.dark("Scroll to Zoom In/Out");
+    }, 1500);
+  }, []);
 
   return (
-    <div className="home_page">
+    <div className="home_page skill">
       {/* <Particale/> */}
-      <div style={{width:'100%'}} className="home_main_text about_me">
+      <div style={{ width: "100%" }} className="home_main_text about_me">
         <div className="body_tag top">
+          <p className="body_text">&lt;html&gt;</p>
+
           <p className="body_text">&nbsp;&nbsp;&nbsp; &lt;body&gt;</p>
         </div>
         <div className="main_text about_me_main">
@@ -81,7 +90,10 @@ const Skills = () => {
             <span className="body_text ml-3">&lt;/h1&gt;</span>
           </h1>
 
-          <p style={{width:'100%',fontSize:'0.9rem'}} className="about_sub_title">
+          <p
+            style={{ width: "100%", fontSize: "0.9rem" }}
+            className="about_sub_title"
+          >
             Expert in front-end development including technologies like
             <span className="tech_name">HTML5</span>,
             <span className="tech_name">CSS3</span>,
@@ -117,9 +129,19 @@ const Skills = () => {
         </div>
       </div>
       <div className="home_logo tag_canvus_">
-
-              <TagCanvus />
+        <TagCanvus />
       </div>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={true}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 };

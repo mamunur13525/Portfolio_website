@@ -65,8 +65,8 @@ const Sidebar = () => {
             </div>
           </li>
           <li className="nav-item">
-            <div onClick={()=>push('/home')} className="icon_name_div">
-              <VisibilityOutlinedIcon className={pathname === '/home' ? "sidebar_icon active" :"sidebar_icon"} />
+            <div onClick={()=>push('/projects')} className="icon_name_div">
+              <VisibilityOutlinedIcon className={pathname === '/projects' ? "sidebar_icon active" :"sidebar_icon"} />
               <p className="nav-link" >
                 Projects
               </p>

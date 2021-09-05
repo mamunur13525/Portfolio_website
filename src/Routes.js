@@ -5,6 +5,7 @@ import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
 import Tips from "./components/Tips/Tips";
 import Contact from "./components/Contact/Contact";
+import Projects from "./components/Projects/Projects";
 
 const Routes = () => {
   return (
@@ -26,6 +27,9 @@ const Routes = () => {
       </Route>
       <Route path="/contact">
         <Contact />
+      </Route>
+      <Route path="/projects">
+        <Projects />
       </Route>
     </Switch>
   );

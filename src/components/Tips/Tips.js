@@ -20,10 +20,12 @@ const addClass = (event)=> {
 
     return (
 
-         <div className="home_page">
+         <div className="home_page tips">
       {/* <Particale/> */}
       <div className="home_main_text about_me">
         <div className="body_tag top">
+        <p className="body_text">&lt;html&gt;</p>
+
           <p className="body_text">&nbsp;&nbsp;&nbsp; &lt;body&gt;</p>
         </div>
         <div className="main_text about_me_main">

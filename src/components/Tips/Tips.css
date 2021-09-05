@@ -3,7 +3,7 @@
     align-items: center;
 }
 .technology_icon{
-    width: 120px;
+    width: 100px;
     transition: transform .3s;
     margin-right: 2rem;
     cursor: pointer;

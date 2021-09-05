@@ -2,122 +2,108 @@ import { Cloud } from "react-icon-cloud";
 import React from "react";
 import { v4 } from "uuid";
 
-// https://raw.githubusercontent.com/simple-icons/simple-icons/develop/_data/simple-icons.json
-const iconSlugs = [
-  "typescript",
-  "javascript",
-  "dart",
-  "java",
-  "react",
-  "flutter",
-  "android",
-  "html5",
-  "css3",
-  "nodedotjs",
-  "express",
-  "nextdotjs",
-  "prisma",
-  "amazonaws",
-  "postgresql",
-  "firebase",
-  "nginx",
-  "vercel",
-  "testinglibrary",
-  "jest",
-  "cypress",
-  "docker",
-  "git",
-  "jira",
-  "github",
-  "gitlab",
-  "visualstudiocode",
-  "androidstudio",
-  "sonarqube",
-  "figma",
-];
-
 const wordTags = [
   {
     id: 0,
-    title: "Hello",
+    title: "Typescript",
   },
   {
     id: 1,
-    title: "World",
+    title: "Javascript",
   },
   {
-    id: 1,
-    title: "World",
+    id: 2,
+    title: "CSS3",
   },
   {
-    id: 1,
-    title: "World",
+    id: 3,
+    title: "HTML5",
   },
   {
-    id: 1,
-    title: "World",
+    id: 4,
+    title: "Node.js",
   },
   {
-    id: 1,
-    title: "World",
+    id: 5,
+    title: "Express.js",
   },
   {
-    id: 1,
-    title: "World",
+    id: 6,
+    title: "Figma",
   },
   {
-    id: 1,
-    title: "World",
+    id: 7,
+    title: "Visual-Studio-Code",
   },
   {
-    id: 1,
-    title: "World",
+    id: 8,
+    title: "Gitlab",
   },
   {
-    id: 1,
-    title: "World",
+    id: 9,
+    title: "Github",
   },
   {
-    id: 1,
-    title: "World",
+    id: 10,
+    title: "Jira",
   },
   {
-    id: 1,
-    title: "World",
+    id: 11,
+    title: "Git",
   },
   {
-    id: 1,
-    title: "World",
+    id: 12,
+    title: "Firebase",
   },
   {
-    id: 1,
-    title: "World",
+    id: 13,
+    title: "Redux",
   },
   {
-    id: 1,
-    title: "World",
+    id: 14,
+    title: "Typescript",
   },
   {
-    id: 1,
-    title: "World",
+    id: 15,
+    title: "Mongodb",
   },
   {
-    id: 1,
-    title: "World",
+    id: 16,
+    title: "SASS",
   },
   {
-    id: 1,
-    title: "World",
+    id: 17,
+    title: "Bootstrap",
   },
   {
-    id: 1,
-    title: "World",
+    id: 18,
+    title: "JQuery",
   },
+  {
+    id: 19,
+    title: "Webpack",
+  },
+  {
+    id:20,
+    title: "REST API",
+  },
+  {
+    id: 21,
+    title: "JSON",
+  },
+  {
+    id: 22,
+    title: "npm",
+  },
+  {
+    id: 23,
+    title: "ES5/ES6",
+  }
 ];
 
 export default function TagCanvus() {
   const tagCanvasOptions = {
-    textColour: "#FFFFFF",
+    textColour: "#FFDE34",
     outlineThickness: 0.5,
     outlineColour: "#fe0853",
     maxSpeed: 0.06,
@@ -126,19 +112,22 @@ export default function TagCanvus() {
     shape: "sphere",
     zoom: 1,
     noSelect: true,
-    textFont: null,
     pinchZoom: true,
     freezeDecel: true,
     fadeIn: 3000,
     initial: [0.3, -0.1],
-    depth: 0.8,
-    clickToFront: 500,
-    textHeight: 30,
-    imageScale: 2,
+    depth: 0.97,  
     reverse: true,
+    clickToFront: 500,
+    textHeight: 35,
+    imageScale: 2,
+    dragControl:true,
     tooltip: "native",
     tooltipDelay: 0,
     wheelZoom: true,
+    textFont:'Arial, sans-serif',
+
+  
   };
 
   return (

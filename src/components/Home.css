@@ -111,3 +111,20 @@ h1.main_heading_title::before {
 .colorWhite:hover{
   color: orange!important;
 }
+.home::after{ content: 'HOME';}
+.about::after{ content: 'ABOUT';}
+.skill::after{ content: 'SKILLS';}
+.tips::after{ content: 'TIPS';}
+.home::after,.about::after,.skill::after,.tips::after{
+ 
+  color: #ffffff0a;
+  position: fixed;
+  bottom: -145px;
+  right: 0;
+  font-size: 26rem;
+  height: auto;
+  font-weight: bold;
+  text-align: end;
+  width: fit-content;
+  vertical-align: middle;
+}

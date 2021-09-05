@@ -1,4 +1,5 @@
 import React from "react";
+import TagCanvus from "../../Effect/TagCanvus";
 import PageLoading from "../Share/PageLoading";
 import Sidebar from "../Share/Sidebar";
 import "./Skills.css";
@@ -15,7 +16,7 @@ const Skills = () => {
   return (
     <div className="home_page">
       {/* <Particale/> */}
-      <div className="home_main_text about_me">
+      <div style={{width:'100%'}} className="home_main_text about_me">
         <div className="body_tag top">
           <p className="body_text">&nbsp;&nbsp;&nbsp; &lt;body&gt;</p>
         </div>
@@ -80,7 +81,7 @@ const Skills = () => {
             <span className="body_text ml-3">&lt;/h1&gt;</span>
           </h1>
 
-          <p className="about_sub_title">
+          <p style={{width:'100%',fontSize:'0.9rem'}} className="about_sub_title">
             Expert in front-end development including technologies like
             <span className="tech_name">HTML5</span>,
             <span className="tech_name">CSS3</span>,
@@ -115,9 +116,9 @@ const Skills = () => {
           <p className="body_text">&lt;/html&gt;</p>
         </div>
       </div>
-      <div className="home_logo">
+      <div className="home_logo tag_canvus_">
 
-        
+              <TagCanvus />
       </div>
     </div>
   );

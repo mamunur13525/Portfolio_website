@@ -4,3 +4,8 @@
 .link_tag{
     color: yellow;
 }
+.tag_canvus_{
+    width: 100%;
+    margin-right: 0px;
+    transform: rotate(0)
+}

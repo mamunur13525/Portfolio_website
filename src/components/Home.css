@@ -115,6 +115,7 @@ h1.main_heading_title::before {
 .about::after{ content: 'ABOUT';}
 .skill::after{ content: 'SKILLS';}
 .tips::after{ content: 'TIPS';}
+.contact::after{ content: 'CONTACT';}
 .home::after,.about::after,.skill::after,.tips::after{
  
   color: #ffffff0a;

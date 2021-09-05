@@ -1,80 +1,140 @@
 import React from "react";
-import PageLoading from "../Share/PageLoading";
-import Sidebar from "../Share/Sidebar";
 import "./Contact.css";
+import MyComponent from "./Maps";
 
 const Contact = () => {
-  return (
-    <div className="home_page">
-      <PageLoading />
-      <Sidebar />
-      <div className="row">
-        <div className="col-md-6 contatct-half">
-          <div className="start_tag_box">
-            <p className="body_tag">&lt;body&gt;</p>
-          </div>
-          <div className="home_main_text">
-            <p className="h1_tag mt-5">&lt;h1&gt;</p>
-            <h1 className="main_heading_title about_header">Contact me</h1>
-            <p className="h1_tag mt-4">&lt;/h1&gt;</p>
-            <p className="text_contact">
-              I am interested in freelance opportunities – especially ambitious
-              or large projects. However, if you have other request or question,
-              don’t hesitate to contact me using below form either.
-            </p>
+  //Mouse Hover Effect
+  const addClass = (event) => {
+    event.target.className += ` rabber_band`;
+    setTimeout(() => {
+      event.target.className = `blast`;
+    }, 1000);
+  };
 
-            <form className="contact_form">
-              <div className='d-flex justify-content-between'>
-                <div className="span_input">
-                  <input
-                    autoComplete="new password"
-                    className="input_form name_feild"
-                    type="text"
-                    placeholder="Name"
-                    name="name"
-                    id="nameFeild"
-                  />
-                  <label className="label_after" htmlFor="nameFeild"></label>
-                </div>
-                <div className="span_input">
-                  <input
-                    autoComplete="new password"
-                    className="input_form email"
-                    type="email"
-                    placeholder="Email"
-                    name="email"
-                    id="emailFeild"
-                  />
-                  <label className="label_after" htmlFor="emailFeild"></label>
-                </div>
+  const onHandleChange = (e) => {
+    if (e.target.value) {
+      e.target.className += ` focus`;
+    } else {
+      e.target.className = `input_form`;
+    }
+  };
+  return (
+    <div className="home_page about ">
+      {/* <Particale/> */}
+      <div className="home_main_text contact">
+        <div className="body_tag top">
+          <p className="body_text">&lt;html&gt;</p>
+        </div>
+        <div className="main_text about_me_main contact_box">
+          <h1 className="main_heading_title">
+            <span onMouseEnter={(e) => addClass(e)} className="blast">
+              C
+            </span>
+            <span onMouseEnter={(e) => addClass(e)} className="blast">
+              o
+            </span>
+            <span onMouseEnter={(e) => addClass(e)} className="blast">
+              n
+            </span>
+            <span onMouseEnter={(e) => addClass(e)} className="blast">
+              t
+            </span>
+            <span onMouseEnter={(e) => addClass(e)} className="blast">
+              a
+            </span>
+            <span onMouseEnter={(e) => addClass(e)} className="blast">
+              c
+            </span>
+            <span onMouseEnter={(e) => addClass(e)} className="blast">
+              t
+            </span>
+            &nbsp;
+            <span onMouseEnter={(e) => addClass(e)} className="blast">
+              M
+            </span>
+            <span onMouseEnter={(e) => addClass(e)} className="blast">
+              e
+            </span>
+            <br />
+            <span className="body_text ml-3">&lt;/h1&gt;</span>
+          </h1>
+
+          <p className="text_contact">
+            I am interested in freelance opportunities – especially ambitious or
+            large projects. However, if you have other request or question,
+            don’t hesitate to contact me using below form either.
+          </p>
+
+          <form className="contact_form">
+            <div className="grid_box">
+              <div className="span_input">
+                <input
+                  onChange={(e) => onHandleChange(e)}
+                  autoComplete="new password"
+                  className={"input_form"}
+                  type="text"
+                  placeholder="Name"
+                  name="name"
+                  id="nameFeild"
+                />
+                <label className="label_after" htmlFor="nameFeild"></label>
               </div>
               <div className="span_input">
                 <input
+                  onChange={(e) => onHandleChange(e)}
                   autoComplete="new password"
-                  className="input_form subject"
-                  type="text"
-                  name="subject"
-                  placeholder="Subject"
-                  id="subjectFeild"
+                  className="input_form "
+                  type="email"
+                  placeholder="Email"
+                  name="email"
+                  id="emailFeild"
                 />
-                <label className="label_after" htmlFor="subjectFeild"></label>
+                <label className="label_after" htmlFor="emailFeild"></label>
               </div>
-              <div className="span_input">
-                <textarea
-                  className="input_form message"
-                  placeholder="Message"
-                  name="msg"
-                  id="textarea"
-                />
-                <label className="label_after" htmlFor="textarea"></label>
-              </div>
-            </form>
-          </div>
-          <div className="end_tag_box">
-            <p className="body_tag mt-5">&nbsp;&nbsp;&nbsp; &lt;/body&gt;</p>
-            <p className="body_tag">&lt;/html&gt;</p>
-          </div>
+            </div>
+            <div className="span_input">
+              <input
+                onChange={(e) => onHandleChange(e)}
+                autoComplete="new password"
+                className="input_form "
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                id="subjectFeild"
+              />
+              <label className="label_after" htmlFor="subjectFeild"></label>
+            </div>
+            <div className="span_input">
+              <textarea
+                onChange={(e) => onHandleChange(e)}
+                className="input_form "
+                placeholder="Message"
+                name="msg"
+                id="textarea"
+              />
+              <label
+                className="label_after text_area_label"
+                htmlFor="textarea"
+              ></label>
+            </div>
+          </form>
         </div>
+        <div className="body_tag bottom">
+          <p className="body_text">&lt;/html&gt;</p>
+        </div>
+      </div>
+      <div className="home_logo map_section">
+        <div className="info_map">
+          Mamun Ahmed,
+          <br />
+          Bangladesh,
+          <br />
+          Dhaka Bangladesh <br />
+          Dhaka <br />
+          <br />
+          <span>mamun.ahmed13525@gmail.com</span>
+        </div>
+        <MyComponent />
       </div>
     </div>
   );

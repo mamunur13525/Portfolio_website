@@ -31,29 +31,81 @@ textarea.input_form {
 }
 .span_input {
   width: 100%;
-  margin-bottom: .7rem;
 }
-.d-flex .span_input{
-    width: 48%;
+.d-flex .span_input {
+  width: 48%;
 }
-.label_after{
-    width: 100%;
-    margin: 0px;
-    position: relative;
+.label_after {
+  width: 100%;
+  margin: 0px;
+  position: relative;
 }
 .label_after::after {
-    content: '';
-    width: 0%;
-    background: red;
-    height: 2px;
-    display: block;
-    position: absolute;
-    top: -19px;
-    left: 0;
-    transition: all .4s;
+  content: "";
+  width: 0%;
+  background: #FFA500;
+  height: 2px;
+  display: block;
+  position: absolute;
+  top: -19px;
+  left: 0;
+  transition: all 0.4s;
 }
 
-.input_form:focus +.label_after::after{
-    width: 100%;
-    transition: all .4s;
+.input_form:focus + .label_after::after {
+  width: 100%;
+  transition: all 0.4s;
+}
+
+.focus + .label_after::after {
+  width: 100%;
+  transition: all 0.4s;
+}
+.text_area_label {
+  top: -5px;
+}
+.span_input {
+  height: 55px;
+  margin-bottom: 0px;
+}
+
+.grid_box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.map_section {
+  width: 60%;
+  background: white;
+  margin: 0;
+  transform: rotate(0);
+  height: 100%;
+  z-index: 2133;
+  position:relative
+}
+.contact_box{
+  width: 82%;
+}
+.contact{
+  width: 40%;
+}
+.info_map{
+  position: absolute;
+  background: #000;
+  top: 50px;
+  left: 5%;
+  z-index: 999999;
+  width: fit-content;
+  padding: 20px;
+  color: #fff;
+  font-family: "Open Sans", "Helvetica", Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+}
+img.marker_pic {
+  position: absolute;
+  top: 42%;
+  width: 5%;
+  left: 47.5%;
 }

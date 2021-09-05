@@ -10,21 +10,44 @@ import mongodb from '../../image/mongodb.png';
 import css from '../../image/css.svg';
 
 const Tips = () => {
+    //Mouse Hover Effect
+const addClass = (event)=> {
+  event.target.className += ` rabber_band`;
+  setTimeout(()=>{
+    event.target.className = `blast`;
+  },1000)
+} 
+
     return (
-        <div className="home_page">
-        <PageLoading />
-        <Sidebar />
-        <div className="start_tag_box">
-          <p className="body_tag">&lt;body&gt;</p>
+
+         <div className="home_page">
+      {/* <Particale/> */}
+      <div className="home_main_text about_me">
+        <div className="body_tag top">
+          <p className="body_text">&nbsp;&nbsp;&nbsp; &lt;body&gt;</p>
         </div>
-        <div className="home_main_text">
-          <p className="h1_tag mt-5">&lt;h1&gt;</p>
-          <h1 className="main_heading_title about_header">FrontEnd Tips</h1>
-          <p className="h1_tag mt-4">&lt;/h1&gt;</p>
-          <p className="h1_tag mt-4">&lt;img&gt;</p>
-  
-  
-         <div className="icon">
+        <div className="main_text about_me_main">
+          {/* <p className="h1_tag mt-5">&lt;h1&gt;</p> */}
+
+          <h1 className="main_heading_title">
+            <span onMouseEnter={(e)=> addClass(e)} className="blast">F</span>
+            <span onMouseEnter={(e)=> addClass(e)} className="blast">r</span>
+            <span onMouseEnter={(e)=> addClass(e)} className="blast">o</span>
+            <span onMouseEnter={(e)=> addClass(e)} className="blast">n</span>
+            <span onMouseEnter={(e)=> addClass(e)} className="blast">t</span>
+            <span onMouseEnter={(e)=> addClass(e)} className="blast">e</span>
+            <span onMouseEnter={(e)=> addClass(e)} className="blast">n</span>
+            <span onMouseEnter={(e)=> addClass(e)} className="blast">d</span>
+            &nbsp;
+            <span onMouseEnter={(e)=> addClass(e)} className="blast">T</span>
+            <span onMouseEnter={(e)=> addClass(e)} className="blast">i</span>
+            <span onMouseEnter={(e)=> addClass(e)} className="blast">p</span>
+            <span onMouseEnter={(e)=> addClass(e)} className="blast">s</span>
+            <br />
+            <span className="body_text ml-3">&lt;/h1&gt;</span>
+          </h1>
+
+          <div className="icon">
                <img className='technology_icon' src={js}  alt="js" /> 
                <img className='technology_icon' src={ts}  alt="ts" /> 
                <img className='technology_icon' src={react}  alt="react" /> 
@@ -32,14 +55,19 @@ const Tips = () => {
                <img className='technology_icon css' src={css}  alt="css" /> 
                <img className='technology_icon mongodb' src={mongodb}  alt="mongodb" /> 
          </div>
-          <p className="h1_tag mt-4">&lt;/img&gt;</p>
-  
         </div>
-        <div className="end_tag_box">
-          <p className="body_tag mt-5">&nbsp;&nbsp;&nbsp; &lt;/body&gt;</p>
-          <p className="body_tag">&lt;/html&gt;</p>
+        <div className="body_tag bottom">
+          <p className="body_text">&nbsp;&nbsp;&nbsp; &lt;/body&gt;</p>
+          <p className="body_text">&lt;/html&gt;</p>
         </div>
       </div>
+      <div className="home_logo">
+  
+
+      </div>
+    </div>
+    
+       
     );
 };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import "./Sidebar.css";
 import HomeIcon from "@material-ui/icons/Home";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
@@ -15,6 +15,8 @@ import logo from "../../image/logo.PNG";
 
 const Sidebar = () => {
   const { push } = useHistory();
+  const { pathname } = useLocation();
+  console.log(pathname)
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link to="/home" className="navbar-brand text-light">
@@ -34,13 +36,13 @@ const Sidebar = () => {
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
             <div onClick={() => push("/home")} className="icon_name_div">
-              <HomeIcon className="sidebar_icon" />
+              <HomeIcon className={pathname === '/home' || pathname === '/' ?"sidebar_icon active" :"sidebar_icon"} />
               <p className="nav-link">Home</p>
             </div>
           </li>
           <li className="nav-item">
             <div onClick={()=>push('/about')} className="icon_name_div">
-              <PersonOutlineIcon className="sidebar_icon" />
+              <PersonOutlineIcon className={pathname === '/about' ? "sidebar_icon active" :"sidebar_icon"}  />
               <p className="nav-link" >
                 About
               </p>
@@ -48,7 +50,7 @@ const Sidebar = () => {
           </li>
           <li className="nav-item">
             <div onClick={()=>push('/skills')} className="icon_name_div">
-              <SettingsOutlinedIcon className="sidebar_icon" />
+              <SettingsOutlinedIcon className={pathname === '/skills' ? "sidebar_icon active" :"sidebar_icon"} />
               <p className="nav-link" >
                 Skills
               </p>
@@ -56,7 +58,7 @@ const Sidebar = () => {
           </li>
           <li className="nav-item">
             <div onClick={()=>push('/tips')} className="icon_name_div">
-              <WbIncandescentOutlinedIcon className="sidebar_icon" />
+              <WbIncandescentOutlinedIcon className={pathname === '/tips' ? "sidebar_icon active" :"sidebar_icon"} />
               <p className="nav-link" >
                 Tips
               </p>
@@ -64,15 +66,15 @@ const Sidebar = () => {
           </li>
           <li className="nav-item">
             <div onClick={()=>push('/home')} className="icon_name_div">
-              <VisibilityOutlinedIcon className="sidebar_icon" />
+              <VisibilityOutlinedIcon className={pathname === '/home' ? "sidebar_icon active" :"sidebar_icon"} />
               <p className="nav-link" >
-                My Works
+                Projects
               </p>
             </div>
           </li>
           <li className="nav-item">
             <div onClick={()=>push('/contact')} className="icon_name_div">
-              <EmailOutlinedIcon className="sidebar_icon" />
+              <EmailOutlinedIcon className={pathname === '/contact' ? "sidebar_icon active" :"sidebar_icon"} />
               <p className="nav-link" >
                 Contact
               </p>

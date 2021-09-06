@@ -129,3 +129,9 @@ h1.main_heading_title::before {
   width: fit-content;
   vertical-align: middle;
 }
+
+@media (max-width: 992px) {
+  .home_page{
+    flex-direction: column!important;
+  }
+}

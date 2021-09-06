@@ -1,19 +1,13 @@
 import React, { useEffect } from "react";
 import TagCanvus from "../../Effect/TagCanvus";
 import PageLoading from "../Share/PageLoading";
-import Sidebar from "../Share/Sidebar";
 import "./Skills.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import TitleEffect from "../../Effect/TitleEffect";
 
 const Skills = () => {
-  //Mouse Hover Effect
-  const addClass = (event) => {
-    event.target.className += ` rabber_band`;
-    setTimeout(() => {
-      event.target.className = `blast`;
-    }, 1000);
-  };
+
   useEffect(() => {
     setTimeout(() => {
       toast.dark("Scroll to Zoom In/Out");
@@ -22,7 +16,7 @@ const Skills = () => {
 
   return (
     <div className="home_page skill">
-      {/* <Particale/> */}
+      <PageLoading/>
       <div style={{ width: "100%" }} className="home_main_text about_me">
         <div className="body_tag top">
           <p className="body_text">&lt;html&gt;</p>
@@ -32,63 +26,30 @@ const Skills = () => {
         <div className="main_text about_me_main">
           {/* <p className="h1_tag mt-5">&lt;h1&gt;</p> */}
 
-          <h1 className="main_heading_title">
-            <span onMouseEnter={(e) => addClass(e)} className="blast">
-              S
-            </span>
-            <span onMouseEnter={(e) => addClass(e)} className="blast">
-              k
-            </span>
-            <span onMouseEnter={(e) => addClass(e)} className="blast">
-              i
-            </span>
-            <span onMouseEnter={(e) => addClass(e)} className="blast">
-              l
-            </span>
-            <span onMouseEnter={(e) => addClass(e)} className="blast">
-              l
-            </span>
-            <span onMouseEnter={(e) => addClass(e)} className="blast">
-              s
-            </span>
-            &nbsp;
-            <span onMouseEnter={(e) => addClass(e)} className="blast">
-              &
-            </span>
-            <br />
-            <span onMouseEnter={(e) => addClass(e)} className="blast">
-              E
-            </span>
-            <span onMouseEnter={(e) => addClass(e)} className="blast">
-              x
-            </span>
-            <span onMouseEnter={(e) => addClass(e)} className="blast">
-              p
-            </span>
-            <span onMouseEnter={(e) => addClass(e)} className="blast">
-              e
-            </span>
-            <span onMouseEnter={(e) => addClass(e)} className="blast">
-              r
-            </span>
-            <span onMouseEnter={(e) => addClass(e)} className="blast">
-              i
-            </span>
-            <span onMouseEnter={(e) => addClass(e)} className="blast">
-              e
-            </span>
-            <span onMouseEnter={(e) => addClass(e)} className="blast">
-              n
-            </span>
-            <span onMouseEnter={(e) => addClass(e)} className="blast">
-              c
-            </span>
-            <span onMouseEnter={(e) => addClass(e)} className="blast">
-              e
-            </span>
-            <br />
-            <span className="body_text ml-3">&lt;/h1&gt;</span>
-          </h1>
+         
+          <TitleEffect
+            h1={<span className="body_text ml-3">&lt;/h1&gt;</span>}
+            title={[
+              "S",
+              "k",
+              "i",
+              "l",
+              "l",
+              "",
+              "&",
+              "<br/>",
+              "E",
+              "x",
+              "p",
+              "e",
+              "r",
+              "i",
+              "e",
+              "n",
+              "c",
+              "e",
+            ]}
+          />
 
           <p
             style={{ width: "100%", fontSize: "0.9rem" }}

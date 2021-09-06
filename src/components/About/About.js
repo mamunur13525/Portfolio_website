@@ -6,21 +6,15 @@ import logo from "../../image/logo.PNG";
 import BoxRotate from "../BoxRotate";
 import "animate.css";
 import Particale from '../../Effect/Particale'
+import TitleEffect from "../../Effect/TitleEffect";
 const About = () => {
   
 
-  //Mouse Hover Effect
-const addClass = (event)=> {
-    event.target.className += ` rabber_band`;
-    setTimeout(()=>{
-      event.target.className = `blast`;
-    },1000)
-  } 
 
 
   return (
     <div className="home_page about">
-      {/* <Particale/> */}
+      <PageLoading/>
       <div className="home_main_text about_me">
         <div className="body_tag top">
         <p className="body_text">&lt;html&gt;</p>
@@ -30,18 +24,8 @@ const addClass = (event)=> {
         <div className="main_text about_me_main">
           {/* <p className="h1_tag mt-5">&lt;h1&gt;</p> */}
 
-          <h1 className="main_heading_title">
-            <span onMouseEnter={(e)=> addClass(e)} className="blast">A</span>
-            <span onMouseEnter={(e)=> addClass(e)} className="blast">b</span>
-            <span onMouseEnter={(e)=> addClass(e)} className="blast">o</span>
-            <span onMouseEnter={(e)=> addClass(e)} className="blast">u</span>
-            <span onMouseEnter={(e)=> addClass(e)} className="blast">t</span>
-            &nbsp;
-            <span onMouseEnter={(e)=> addClass(e)} className="blast">M</span>
-            <span onMouseEnter={(e)=> addClass(e)} className="blast">e</span>
-            <br />
-            <span className="body_text ml-3">&lt;/h1&gt;</span>
-          </h1>
+        <TitleEffect h1={<span className="body_text ml-3">&lt;/h1&gt;</span>} title={['A','b','o','u','t']} />
+         
 
           <p className="about_text">
             I’m very ambitious front-end developer looking for a role in

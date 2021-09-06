@@ -81,14 +81,14 @@ textarea.input_form {
   margin: 0;
   transform: rotate(0);
   height: 100%;
-  z-index: 2133;
+  z-index: 100;
   position:relative
 }
 .contact_box{
   width: 82%;
 }
 .contact{
-  width: 40%;
+  width: 45%;
 }
 .info_map{
   position: absolute;

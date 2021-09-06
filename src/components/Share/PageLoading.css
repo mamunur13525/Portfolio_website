@@ -5,7 +5,7 @@
     position: absolute;
     transform: translate(-350%);
     top:0%;
-    z-index: 10;
+    z-index: 110;
     display: grid;
     place-content: center;
     transition: all 1s;

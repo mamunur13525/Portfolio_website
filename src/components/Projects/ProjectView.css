@@ -1,0 +1,96 @@
+img {
+  max-width: 100%;
+}
+.project_details_page{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 1rem;
+}
+.closeIcon{
+    cursor: pointer;
+    color: #FFA500;
+    font-size: 2rem!important;
+}
+
+.preview.col-md-6 {
+display: flex!important;
+}
+.product_view_header{
+    display:flex;
+    justify-content: space-between;
+    padding: 2rem;
+    padding-left: 10%;
+    padding-bottom: 0px;
+}
+ul.preview-thumbnail.nav.nav-tabs{
+    display: flex;
+    flex-direction: column;
+}
+.preview-thumbnail.nav-tabs {
+  border: none;
+}
+.preview-thumbnail.nav-tabs li {
+    margin-bottom: 0.7rem;
+    width: 115px;
+    margin-left: 0.7rem;
+}
+.preview-thumbnail.nav-tabs li img {
+  max-width: 100%;
+  display: block;
+}
+
+
+
+.project_view_details_text {
+  padding: 3em;
+  line-height: 1.5em;
+}
+
+h2.project_title {
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+p.project_sub_title {
+    margin-bottom: 2rem;
+}
+p.project_description {
+    text-align: justify;
+}
+p.project_use{
+    margin-top: 3rem;
+}
+p.project_write {
+    display: flex;
+}
+ul.project_ul:last-child {
+    margin-left: 7rem;
+}
+
+.project_button button:last-child {
+    margin-left: 1.1rem;
+}
+.btn_icon{
+    animation: animates 2s ease infinite;
+    animation-play-state: paused;
+}
+
+.project_button button:hover .btn_icon{
+    animation-play-state:running;
+
+}
+
+@keyframes animates {
+    from,
+  to {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+ 
+}

@@ -70,6 +70,10 @@
   background-position: center center;
   transform: rotateX(-90deg) translateZ(100px);
   box-shadow: 0 0 40px #007eff;
+  
+}
+.box-area .box6 img{
+  transform: rotate(-90deg);
 }
 
 @keyframes animate {

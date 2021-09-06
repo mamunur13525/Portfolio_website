@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import "./Sidebar.css";
-import HomeIcon from "@material-ui/icons/Home";
+import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
 import SettingsOutlinedIcon from "@material-ui/icons/SettingsOutlined";
 import WbIncandescentOutlinedIcon from "@material-ui/icons/WbIncandescentOutlined";
@@ -21,7 +21,7 @@ const Sidebar = () => {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link to="/home" className="navbar-brand text-light">
         <img className="brand_image" src={logo} alt="logo" />
-        <span>Mamun</span>
+        <span className='sidebar_title'>Mamun</span>
       </Link>
       <button
         className="navbar-toggler ml-auto custom-toggler"
@@ -36,7 +36,7 @@ const Sidebar = () => {
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
             <div onClick={() => push("/home")} className="icon_name_div">
-              <HomeIcon className={pathname === '/home' || pathname === '/' ?"sidebar_icon active" :"sidebar_icon"} />
+              <HomeOutlinedIcon className={pathname === '/home' || pathname === '/' ?"sidebar_icon active" :"sidebar_icon"} />
               <p className="nav-link">Home</p>
             </div>
           </li>

@@ -1,6 +1,8 @@
 import React from "react";
 import "./Contact.css";
 import MyComponent from "./Maps";
+import PageLoading from "../Share/PageLoading";
+
 
 const Contact = () => {
   //Mouse Hover Effect
@@ -13,14 +15,16 @@ const Contact = () => {
 
   const onHandleChange = (e) => {
     if (e.target.value) {
-      e.target.className += ` focus`;
+      if(e.target.className !== `input_form focus`){
+        e.target.className += ` focus`;
+      }
     } else {
       e.target.className = `input_form`;
     }
   };
   return (
     <div className="home_page about ">
-      {/* <Particale/> */}
+      <PageLoading/>
       <div className="home_main_text contact">
         <div className="body_tag top">
           <p className="body_text">&lt;html&gt;</p>
@@ -69,7 +73,7 @@ const Contact = () => {
             <div className="grid_box">
               <div className="span_input">
                 <input
-                  onChange={(e) => onHandleChange(e)}
+                  onBlur={(e) => onHandleChange(e)}
                   autoComplete="new password"
                   className={"input_form"}
                   type="text"
@@ -81,7 +85,7 @@ const Contact = () => {
               </div>
               <div className="span_input">
                 <input
-                  onChange={(e) => onHandleChange(e)}
+                  onBlur={(e) => onHandleChange(e)}
                   autoComplete="new password"
                   className="input_form "
                   type="email"
@@ -94,7 +98,7 @@ const Contact = () => {
             </div>
             <div className="span_input">
               <input
-                onChange={(e) => onHandleChange(e)}
+                onBlur={(e) => onHandleChange(e)}
                 autoComplete="new password"
                 className="input_form "
                 type="text"
@@ -106,7 +110,7 @@ const Contact = () => {
             </div>
             <div className="span_input">
               <textarea
-                onChange={(e) => onHandleChange(e)}
+                onBlur={(e) => onHandleChange(e)}
                 className="input_form "
                 placeholder="Message"
                 name="msg"

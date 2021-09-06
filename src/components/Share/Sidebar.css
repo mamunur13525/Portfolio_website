@@ -6,10 +6,15 @@
   background-color: #181818 !important;
   position: fixed;
   left: 0;
-  z-index: 12;
+  z-index: 112;
 }
 .brand_image {
   width: 20px;
+}
+.sidebar_title{
+  font-size: 1rem;
+    font-weight: bold;
+    margin-top: 0.4rem;
 }
 a.navbar-brand {
   margin-right: 0rem;
@@ -19,7 +24,7 @@ a.navbar-brand {
   align-items: center;
 }
 .navbar-nav {
-  flex-direction: column !important;
+  flex-direction: column!important ;
   justify-content: space-evenly;
 }
 .nav-item {
@@ -123,8 +128,11 @@ p.nav-link {
     position: static;
   }
   .navbar-nav {
-    flex-direction: column;
+    flex-direction: row!important;
     justify-content: space-evenly;
+  }
+  li.nav-item {
+    width:fit-content
   }
   .navbar-expand-lg .navbar-nav {
     flex-direction: row;

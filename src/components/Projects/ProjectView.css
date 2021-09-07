@@ -20,8 +20,7 @@ display: flex!important;
 .product_view_header{
     display:flex;
     justify-content: space-between;
-    padding: 2rem;
-    padding-left: 10%;
+
     padding-bottom: 0px;
 }
 ul.preview-thumbnail.nav.nav-tabs{
@@ -40,12 +39,19 @@ ul.preview-thumbnail.nav.nav-tabs{
   max-width: 100%;
   display: block;
 }
+.Modal_view {
+  width: 87%;
+  background: #022C43;
+  border-radius: 8px;
+  padding: 2rem;
 
+}
 
 
 .project_view_details_text {
-  padding: 3em;
+margin-top: 2rem;
   line-height: 1.5em;
+  margin-bottom: 1rem;
 }
 
 h2.project_title {
@@ -53,7 +59,7 @@ h2.project_title {
     font-weight: bold;
 }
 p.project_sub_title {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 p.project_description {
     text-align: justify;

@@ -14,7 +14,7 @@ const Projects = () => {
   }, []);
   return (
     <div style={{ height: "100%" }} className="home_page projects">
-      <PageLoading/>
+      {/* <PageLoading/> */}
       <div className="project_div">
         <div className="row project_row">
           <div onClick={() => setShowProjectDetails(true)} className="col-md-3">
@@ -206,7 +206,9 @@ const Projects = () => {
             : "project_details_view hide"
         }
       >
-        <ProjectView setShowProjectDetails={setShowProjectDetails} />
+        
+         <ProjectView setShowProjectDetails={setShowProjectDetails} />
+        
       </div>
       <ToastContainer
         position="bottom-right"

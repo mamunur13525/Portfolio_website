@@ -1,15 +1,39 @@
-import React from "react";
+import React,{useEffect, useRef} from "react";
 import "./ProjectView.css";
 import CloseIcon from "@material-ui/icons/Close";
 import Particale from "../../Effect/Particale";
 import TitleEffect from "../../Effect/TitleEffect";
-import VisibilityOutlinedIcon from '@material-ui/icons/VisibilityOutlined';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-import LinkIcon from '@material-ui/icons/Link';
+
+
+function useOutsideAlerter(ref,setShowProjectDetails) {
+  useEffect(() => {
+      /**
+       * Alert if clicked on outside of element
+       */
+      function handleClickOutside(event) {
+          if (ref.current && !ref.current.contains(event.target)) {
+              setShowProjectDetails(false)
+          }
+      }
+
+      // Bind the event listener
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+          // Unbind the event listener on clean up
+          document.removeEventListener("mousedown", handleClickOutside);
+      };
+  }, [ref]);
+}
+
+
+
 const ProjectView = ({ setShowProjectDetails }) => {
+  const wrapperRef = useRef(null);
+  useOutsideAlerter(wrapperRef, setShowProjectDetails);
   return (
-    <div>
-      <Particale />
+    <div className='Modal_view' ref={wrapperRef}>
+      {/* <Particale /> */}
       <div className="product_view_header">
         <TitleEffect
           h1={""}
@@ -23,7 +47,7 @@ const ProjectView = ({ setShowProjectDetails }) => {
       <div className="project_details_page">
         <div className="project_view_details_text">
           <div className="container-fliud">
-            <div className="row">
+            <div style={{marginLeft:'0px', width:'100%'}} className="row">
               <div className="preview col-md-6">
                 <div className="preview-pic tab-content">
                   <div className="tab-pane active" id="pic-1">

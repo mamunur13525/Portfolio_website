@@ -1,6 +1,6 @@
 import React from "react";
 import "./Contact.css";
-import MyComponent from "./Maps";
+import MapComponent from "./Maps";
 import PageLoading from "../Share/PageLoading";
 
 
@@ -26,9 +26,7 @@ const Contact = () => {
     <div className="home_page about ">
       <PageLoading/>
       <div className="home_main_text contact">
-        <div className="body_tag top">
-          <p className="body_text">&lt;html&gt;</p>
-        </div>
+      
         <div className="main_text about_me_main contact_box">
           <h1 className="main_heading_title">
             <span onMouseEnter={(e) => addClass(e)} className="blast">
@@ -123,9 +121,7 @@ const Contact = () => {
             </div>
           </form>
         </div>
-        <div className="body_tag bottom">
-          <p className="body_text">&lt;/html&gt;</p>
-        </div>
+      
       </div>
       <div className="home_logo map_section">
         <div className="info_map">
@@ -138,7 +134,7 @@ const Contact = () => {
           <br />
           <span>mamun.ahmed13525@gmail.com</span>
         </div>
-        <MyComponent />
+        <MapComponent />
       </div>
     </div>
   );

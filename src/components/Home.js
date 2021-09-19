@@ -3,9 +3,11 @@ import "./Home.css";
 import logo from "../image/logo.PNG";
 import "animate.css"
 import PageLoading from "./Share/PageLoading";
+import {  useHistory, } from "react-router-dom";
+
 // import Particale from "../Effect/Particale";
 const Home = () => {
-
+  const {push} = useHistory()
   //Mouse Hover Effect
   const addClass = (event)=> {
     event.target.className += ` rabber_band`;
@@ -13,23 +15,28 @@ const Home = () => {
       event.target.className = `colorWhite`;
     },1000)
   } 
+  const contact =()=>{
+    push('/contact')
+  }
 
   return (
     <div className="home_page home">
-      {/* <Particale/> */}
+        
     <PageLoading/>
       <div className="home_main_text ">
-        <div className="body_tag top">
-          <p className="body_text">&lt;html&gt;</p>
-          <p className="body_text">&nbsp;&nbsp;&nbsp; &lt;body&gt;</p>
-        </div>
-        <div className="main_text">
+      
+        <div className="main_text home">
           {/* <p className="h1_tag mt-5">&lt;h1&gt;</p> */}
           <h1 className="main_heading_title">
-          <span  onMouseEnter={(e)=> addClass(e)} className="colorWhite">H</span>
+              <div className="d-flex">
+              <span  onMouseEnter={(e)=> addClass(e)} className="colorWhite">H</span>
             <span  onMouseEnter={(e)=> addClass(e)} className="colorWhite">i</span>
             <span  onMouseEnter={(e)=> addClass(e)} className="colorWhite">,</span>
-            <br />
+
+              </div>
+            
+            <div className="d-flex">
+              
             <span  onMouseEnter={(e)=> addClass(e)} className="colorWhite">I</span>
             <span  onMouseEnter={(e)=> addClass(e)} className="colorWhite">'</span>
             <span  onMouseEnter={(e)=> addClass(e)} className="colorWhite">m</span>&nbsp;
@@ -44,7 +51,10 @@ const Home = () => {
             <span  onMouseEnter={(e)=> addClass(e)} className="colorWhite">e</span>
             <span  onMouseEnter={(e)=> addClass(e)} className="colorWhite">d</span>
              
-            <br />
+            </div>
+      
+            <div className="d-flex">
+              
             <span  onMouseEnter={(e)=> addClass(e)} className="colorWhite">w</span>
             <span  onMouseEnter={(e)=> addClass(e)} className="colorWhite">e</span>
             <span  onMouseEnter={(e)=> addClass(e)} className="colorWhite">b</span>&nbsp;
@@ -58,23 +68,22 @@ const Home = () => {
             <span  onMouseEnter={(e)=> addClass(e)} className="colorWhite">e</span>
             <span  onMouseEnter={(e)=> addClass(e)} className="colorWhite">r</span>
           
+            </div>
             <span className="body_text ml-3">&lt;/h1&gt;</span>
           </h1>
 
           <p className="sub_title">
             Front End Developer / Javascript Expert / Freelancer
           </p>
-          <button className="contactMeBtn mt-4 ">contact me</button>
+          <button  onClick={contact} className="contactMeBtn mt-4 ">contact me</button>
         </div>
-        <div className="body_tag bottom">
-          <p className="body_text">&nbsp;&nbsp;&nbsp; &lt;/body&gt;</p>
-          <p className="body_text">&lt;/html&gt;</p>
-        </div>
+        
       </div>
 
-      <div className="home_logo">
+      <div className="home_logo landing_logo">
         <img src={logo} alt="logo" />
       </div>
+    
     </div>
   );
 };

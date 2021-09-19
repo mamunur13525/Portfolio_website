@@ -8,11 +8,8 @@ p.about_sub_title {
 .about_header{
     color: yellow;
 }
-.about_me{
-    margin-left: 5%;
-}
+
 .about_me_main {
-    margin-left: 10%;
     width: 73%;
 }
 p.about_text {
@@ -71,3 +68,13 @@ p.about_text {
       transform: scale3d(1, 1, 1);
     }
   } 
+
+
+  
+@media (max-width: 992px) {
+  .about_me_main{
+    margin-top: 7%;
+    width: 100%;
+    margin-left: 0%;
+  }
+}

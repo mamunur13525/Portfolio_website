@@ -31,6 +31,8 @@ textarea.input_form {
 }
 .span_input {
   width: 100%;
+  height: auto;
+  margin-bottom: 0px;
 }
 .d-flex .span_input {
   width: 48%;
@@ -64,10 +66,7 @@ textarea.input_form {
 .text_area_label {
   top: -5px;
 }
-.span_input {
-  height: 55px;
-  margin-bottom: 0px;
-}
+
 
 .grid_box {
   display: grid;
@@ -80,7 +79,7 @@ textarea.input_form {
   background: white;
   margin: 0;
   transform: rotate(0);
-  height: 100%;
+  height: 100vh;
   z-index: 100;
   position:relative
 }
@@ -103,9 +102,92 @@ textarea.input_form {
   font-size: 17px;
   font-weight: 300;
 }
-img.marker_pic {
+
+
+/* .marker-container{
+  width: 100%;
+  height:100%;
+  display: grid;
+  place-items: center;
+  z-index: 89;
+  position:relative
+} */
+.marker_div{
+  width: 30px;
   position: absolute;
-  top: 42%;
-  width: 5%;
-  left: 47.5%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+ 
+}
+img.marker_pic {
+  width: 100%;
+  height: 3.2rem;
+  transform:translate(0px, -21px);
+}
+.pulse-box {
+  float: left;
+  width: 50%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* pulse in CSS */
+.pulse-css {
+  height: 30px;
+  border-radius: 0.5px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+
+.pulse-css:before, .pulse-css:after {
+  content: "";
+  width: 1px;
+  height: 1px;
+  border-radius: 0.5px;
+  background-color: green;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  transform: scale(26);
+  transform-origin: center center;
+  animation: pulse-me 1s linear infinite;
+}
+.pulse-css:after {
+  animation-delay: 0.2s;
+}
+
+@keyframes pulse-me {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  80% {
+    opacity: 0.09;
+  }
+  100% {
+    transform: scale(85);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact{
+    width: 100%;
+
+  }
+  .contact_box{
+    margin-top: 4%;
+  }
 }

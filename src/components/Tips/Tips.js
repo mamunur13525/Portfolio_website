@@ -13,13 +13,9 @@ const Tips = () => {
   return (
     <div className="home_page tips">
       <PageLoading/>
-      <div className="home_main_text about_me">
-        <div className="body_tag top">
-          <p className="body_text">&lt;html&gt;</p>
-
-          <p className="body_text">&nbsp;&nbsp;&nbsp; &lt;body&gt;</p>
-        </div>
-        <div className="main_text about_me_main">
+      <div className="home_main_text tip_section">
+     
+        <div className="main_text tip_main_text">
           {/* <p className="h1_tag mt-5">&lt;h1&gt;</p> */}
 
           <TitleEffect
@@ -54,12 +50,9 @@ const Tips = () => {
             />
           </div>
         </div>
-        <div className="body_tag bottom">
-          <p className="body_text">&nbsp;&nbsp;&nbsp; &lt;/body&gt;</p>
-          <p className="body_text">&lt;/html&gt;</p>
-        </div>
+       
       </div>
-      <div className="home_logo"></div>
+     
     </div>
   );
 };

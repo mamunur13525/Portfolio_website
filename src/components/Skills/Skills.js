@@ -17,13 +17,13 @@ const Skills = () => {
   return (
     <div className="home_page skill">
       <PageLoading/>
-      <div style={{ width: "100%" }} className="home_main_text about_me">
-        <div className="body_tag top">
+      <div style={{ width: "100%" }} className="home_main_text skill_section">
+        {/* <div className="body_tag top">
           <p className="body_text">&lt;html&gt;</p>
 
           <p className="body_text">&nbsp;&nbsp;&nbsp; &lt;body&gt;</p>
-        </div>
-        <div className="main_text about_me_main">
+        </div> */}
+        <div className="main_text skill_main_text">
           {/* <p className="h1_tag mt-5">&lt;h1&gt;</p> */}
 
          
@@ -84,10 +84,10 @@ const Skills = () => {
             profile for more details or just contact me.
           </p>
         </div>
-        <div className="body_tag bottom">
+        {/* <div className="body_tag bottom">
           <p className="body_text">&nbsp;&nbsp;&nbsp; &lt;/body&gt;</p>
           <p className="body_text">&lt;/html&gt;</p>
-        </div>
+        </div> */}
       </div>
       <div className="home_logo tag_canvus_">
         <TagCanvus />

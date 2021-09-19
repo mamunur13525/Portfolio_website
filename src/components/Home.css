@@ -6,7 +6,7 @@
 }
 .home_page {
   background-color: #022c43;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -70,28 +70,30 @@
 }
 .main_text {
   width: 100%;
-  margin-left: 10%;
   position: relative;
   
 }
 
 .home_logo {
   width: 40%;
-  margin-right: 9%;
+  margin-right: 8%;
   transform: rotate(2deg);
   height:97vh;
   overflow: hidden;
   display: grid;
   place-items: center;
+  margin-bottom: 1rem;
 }
 .home_logo img {
   width: 80%;
 }
 .top{
   top: 2rem;
+  left: 6%;
 }
 .bottom{
   bottom: 0;
+  left: 6%;
 }
 h1.main_heading_title::before {
   content: '<h1>';
@@ -132,6 +134,50 @@ h1.main_heading_title::before {
 
 @media (max-width: 992px) {
   .home_page{
+    height: auto;
     flex-direction: column!important;
+    align-items:start;
+    margin-top: 5rem;
+   
+  }
+  .home_main_text{
+    margin-right: 7%;
+    height: 100%;
+  }
+  .landing_logo{
+    position: absolute;
+    right: 0px;
+    width: 80%;
+  }
+  .home_logo{
+    width: 100%;
+    transform: rotate(0deg);
+    padding-bottom: 2rem;
+    height:auto;
+  }
+  .main_text.home{
+    position: absolute;
+    top:32%;
+    left: 0;
+    width: auto;
+  }
+  h1.main_heading_title{
+    margin-bottom: 1rem;
+  }
+  .contactMeBtn{
+    display: none;
+  }
+  .navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .top{
+  
+    left: 0;
+  }
+  .bottom{
+   
+    left: 0;
   }
 }

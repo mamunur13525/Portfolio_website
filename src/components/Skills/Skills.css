@@ -1,18 +1,24 @@
-.tech_name{
-    color: yellow;
+.skill_title{
+  margin-bottom: 2rem;
 }
-.link_tag{
-    color: yellow;
+.tech_name {
+  color: yellow;
 }
-.tag_canvus_{
-    width: 100%;
-    margin-right: 0px;
-    transform: rotate(0);
-    z-index:12
+.link_tag {
+  color: yellow;
+}
+.tag_canvus_ {
+  width: 100%;
+  margin-right: 0px;
+  transform: rotate(0);
+  z-index: 12;
 }
 
 @media (max-width: 992px) {
-.tag_canvus_{
+  .tag_canvus_ {
     padding: 2rem;
-}
+  }
+  .tech_name {
+    display: inline-block;  
+  }
 }

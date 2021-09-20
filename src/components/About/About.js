@@ -20,6 +20,7 @@ const About = () => {
           <TitleEffect
             h1={<span className="body_text ml-3">&lt;/h1&gt;</span>}
             title={["A", "b", "o", "u", "t"]}
+            sectinoName='about_title'
           />
 
           <p className="about_text">

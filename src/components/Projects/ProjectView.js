@@ -65,22 +65,22 @@ const ProjectView = ({ setShowProjectDetails }) => {
                 </div>
                 <ul className="preview-thumbnail nav nav-tabs">
                   <li>
-                    <a href="#" data-target="#pic-1" data-toggle="tab">
+                    <a href="#/" data-target="#pic-1" data-toggle="tab">
                       <img src="http://placekitten.com/400/255" alt="cat" />
                     </a>
                   </li>
                   <li>
-                    <a href="#" data-target="#pic-2" data-toggle="tab">
+                    <a href="#/" data-target="#pic-2" data-toggle="tab">
                       <img src="http://placekitten.com/400/252" alt="cat" />
                     </a>
                   </li>
                   <li>
-                    <a href="#" data-target="#pic-3" data-toggle="tab">
+                    <a href="#/" data-target="#pic-3" data-toggle="tab">
                       <img src="http://placekitten.com/400/256" alt="cat" />
                     </a>
                   </li>
                   <li>
-                    <a href="#" data-target="#pic-4" data-toggle="tab">
+                    <a href="#/" data-target="#pic-4" data-toggle="tab">
                       <img src="http://placekitten.com/400/259" alt="cat" />
                     </a>
                   </li>
@@ -102,7 +102,7 @@ const ProjectView = ({ setShowProjectDetails }) => {
                 <p className='project_use'>
                     Which Tecnology are use
                 </p>
-                <p className="project_write">
+                <div className="project_write">
                   <ul className="project_ul">
                     <li>Javascript</li>
                     <li>React</li>
@@ -115,7 +115,7 @@ const ProjectView = ({ setShowProjectDetails }) => {
                     <li>HTML5</li>
                     <li>CSS3</li>
                   </ul>
-                </p>
+                </div>
                 <div className='project_button'>
                     <button className='contactMeBtn mt-4 '>
                        <span> View Code </span> <ArrowForwardIcon className='btn_icon'/></button>

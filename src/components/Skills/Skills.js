@@ -17,7 +17,7 @@ const Skills = () => {
   return (
     <div className="home_page skill">
       <PageLoading/>
-      <div style={{ width: "100%" }} className="home_main_text skill_section">
+      <div className="home_main_text skill_section">
         {/* <div className="body_tag top">
           <p className="body_text">&lt;html&gt;</p>
 
@@ -49,6 +49,7 @@ const Skills = () => {
               "c",
               "e",
             ]}
+            sectinoName='skill_title'
           />
 
           <p

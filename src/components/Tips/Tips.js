@@ -35,6 +35,7 @@ const Tips = () => {
               "p",
               "s",
             ]}
+            sectinoName='tip_title'
           />
 
           <div className="icon">

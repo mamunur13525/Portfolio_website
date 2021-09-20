@@ -34,13 +34,17 @@ const Sidebar = () => {
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
-          <li className="nav-item active">
+          <li  type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent" className="nav-item active">
             <div onClick={() => push("/home")} className="icon_name_div">
               <HomeOutlinedIcon className={pathname === '/home' || pathname === '/' ?"sidebar_icon active" :"sidebar_icon"} />
               <p className="nav-link">Home</p>
             </div>
           </li>
-          <li className="nav-item">
+          <li  type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent" className="nav-item">
             <div onClick={()=>push('/about')} className="icon_name_div">
               <PersonOutlineIcon className={pathname === '/about' ? "sidebar_icon active" :"sidebar_icon"}  />
               <p className="nav-link" >
@@ -48,7 +52,9 @@ const Sidebar = () => {
               </p>
             </div>
           </li>
-          <li className="nav-item">
+          <li  type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent" className="nav-item">
             <div onClick={()=>push('/skills')} className="icon_name_div">
               <SettingsOutlinedIcon className={pathname === '/skills' ? "sidebar_icon active" :"sidebar_icon"} />
               <p className="nav-link" >
@@ -56,7 +62,9 @@ const Sidebar = () => {
               </p>
             </div>
           </li>
-          <li className="nav-item">
+          <li  type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent" className="nav-item">
             <div onClick={()=>push('/tips')} className="icon_name_div">
               <WbIncandescentOutlinedIcon className={pathname === '/tips' ? "sidebar_icon active" :"sidebar_icon"} />
               <p className="nav-link" >
@@ -64,7 +72,9 @@ const Sidebar = () => {
               </p>
             </div>
           </li>
-          <li className="nav-item">
+          <li  type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent" className="nav-item">
             <div onClick={()=>push('/projects')} className="icon_name_div">
               <VisibilityOutlinedIcon className={pathname === '/projects' ? "sidebar_icon active" :"sidebar_icon"} />
               <p className="nav-link" >
@@ -72,7 +82,9 @@ const Sidebar = () => {
               </p>
             </div>
           </li>
-          <li className="nav-item">
+          <li  type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent" className="nav-item">
             <div onClick={()=>push('/contact')} className="icon_name_div">
               <EmailOutlinedIcon className={pathname === '/contact' ? "sidebar_icon active" :"sidebar_icon"} />
               <p className="nav-link" >

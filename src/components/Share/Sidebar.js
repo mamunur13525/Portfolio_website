@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import "./Sidebar.css";
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
@@ -14,9 +14,10 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import logo from "../../image/logo.PNG";
 
 const Sidebar = () => {
+  const [ navShow, setNavShow ] = useState(false)
   const { push } = useHistory();
   const { pathname } = useLocation();
-  console.log(pathname)
+  console.log({navShow})
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link to="/home" className="navbar-brand text-light">
@@ -24,27 +25,27 @@ const Sidebar = () => {
         <span className='sidebar_title'>Mamun</span>
       </Link>
       <button
+      onClick={()=>setNavShow((prev)=> !prev)}
         className="navbar-toggler ml-auto custom-toggler"
         type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
       >
         <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <div className={navShow ? "navbar-collapse show_nav" : "navbar-collapse  hide_nav"} >
+        <div onClick={()=>setNavShow(false)} className='close_icon'>
+          close
+        </div>
         <ul className="navbar-nav mr-auto">
-          <li  type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent" className="nav-item active">
+          <li onClick={()=>setNavShow(false)}  type="button"
+       className="nav-item active">
             <div onClick={() => push("/home")} className="icon_name_div">
               <HomeOutlinedIcon className={pathname === '/home' || pathname === '/' ?"sidebar_icon active" :"sidebar_icon"} />
               <p className="nav-link">Home</p>
             </div>
           </li>
-          <li  type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent" className="nav-item">
+          <li onClick={()=>setNavShow(false)}  type="button"
+        className="nav-item">
             <div onClick={()=>push('/about')} className="icon_name_div">
               <PersonOutlineIcon className={pathname === '/about' ? "sidebar_icon active" :"sidebar_icon"}  />
               <p className="nav-link" >
@@ -52,7 +53,7 @@ const Sidebar = () => {
               </p>
             </div>
           </li>
-          <li  type="button"
+          <li onClick={()=>setNavShow(false)}  type="button"
         data-toggle="collapse"
         data-target="#navbarSupportedContent" className="nav-item">
             <div onClick={()=>push('/skills')} className="icon_name_div">
@@ -62,9 +63,7 @@ const Sidebar = () => {
               </p>
             </div>
           </li>
-          <li  type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent" className="nav-item">
+          <li onClick={()=>setNavShow(false)} className="nav-item">
             <div onClick={()=>push('/tips')} className="icon_name_div">
               <WbIncandescentOutlinedIcon className={pathname === '/tips' ? "sidebar_icon active" :"sidebar_icon"} />
               <p className="nav-link" >
@@ -72,9 +71,7 @@ const Sidebar = () => {
               </p>
             </div>
           </li>
-          <li  type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent" className="nav-item">
+          <li  onClick={()=>setNavShow(false)} className="nav-item">
             <div onClick={()=>push('/projects')} className="icon_name_div">
               <VisibilityOutlinedIcon className={pathname === '/projects' ? "sidebar_icon active" :"sidebar_icon"} />
               <p className="nav-link" >
@@ -82,9 +79,7 @@ const Sidebar = () => {
               </p>
             </div>
           </li>
-          <li  type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent" className="nav-item">
+          <li onClick={()=>setNavShow(false)} className="nav-item">
             <div onClick={()=>push('/contact')} className="icon_name_div">
               <EmailOutlinedIcon className={pathname === '/contact' ? "sidebar_icon active" :"sidebar_icon"} />
               <p className="nav-link" >

@@ -12,9 +12,8 @@ import TitleEffect from "../../Effect/TitleEffect";
 const Tips = () => {
   return (
     <div className="home_page tips">
-      <PageLoading/>
+      <PageLoading />
       <div className="home_main_text tip_section">
-     
         <div className="main_text tip_main_text">
           {/* <p className="h1_tag mt-5">&lt;h1&gt;</p> */}
 
@@ -35,25 +34,35 @@ const Tips = () => {
               "p",
               "s",
             ]}
-            sectinoName='tip_title'
+            sectinoName="tip_title"
           />
 
           <div className="icon">
-            <img className="technology_icon" src={js} alt="js" />
-            <img className="technology_icon" src={ts} alt="ts" />
-            <img className="technology_icon" src={react} alt="react" />
-            <img className="technology_icon" src={redux} alt="redux" />
-            <img className="technology_icon css" src={css} alt="css" />
-            <img
-              className="technology_icon mongodb"
-              src={mongodb}
-              alt="mongodb"
-            />
+            <div className='tech_div'>
+              <img className="technology_icon" src={js} alt="js" />
+            </div>
+            <div className='tech_div'>
+              <img className="technology_icon" src={ts} alt="ts" />
+            </div>
+            <div className='tech_div'>
+              <img className="technology_icon" src={react} alt="react" />
+            </div>
+            <div className='tech_div'>
+              <img className="technology_icon" src={redux} alt="redux" />
+            </div>
+            <div className='tech_div'>
+              <img className="technology_icon css" src={css} alt="css" />
+            </div>
+            <div className='tech_div'>
+              <img
+                className="technology_icon mongodb"
+                src={mongodb}
+                alt="mongodb"
+              />
+            </div>
           </div>
         </div>
-       
       </div>
-     
     </div>
   );
 };

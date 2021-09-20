@@ -32,7 +32,10 @@
     width: 90%;
   }
   .technology_icon {
-  width: 130px;
+  }
+  .tech_div{
+    width: 130px;
     margin: 2rem auto;
+
   }
 }

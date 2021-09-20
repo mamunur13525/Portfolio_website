@@ -22,6 +22,7 @@ const TitleEffect = ({ title, h1, sectinoName='' }) => {
           }
         </span>
       ))}
+     &nbsp;
       {
           h1
       }

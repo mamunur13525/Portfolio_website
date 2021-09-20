@@ -204,3 +204,11 @@ img.marker_pic {
     margin:0 auto;
   }
 }
+
+@media (max-width: 550px) {
+  .grid_box{
+    grid-template-columns: 1fr;
+    grid-gap: 0px;
+    margin-top: 1rem;
+  }
+}

@@ -11,13 +11,14 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import TwitterIcon from "@material-ui/icons/Twitter";
-import logo from "../../image/logo.PNG";
+import logo from "../../image/logo.PNG";  
+import { IoClose } from "react-icons/io5";
+
 
 const Sidebar = () => {
   const [ navShow, setNavShow ] = useState(false)
   const { push } = useHistory();
   const { pathname } = useLocation();
-  console.log({navShow})
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link to="/home" className="navbar-brand text-light">
@@ -34,7 +35,7 @@ const Sidebar = () => {
 
       <div className={navShow ? "navbar-collapse show_nav" : "navbar-collapse  hide_nav"} >
         <div onClick={()=>setNavShow(false)} className='close_icon'>
-          close
+          <IoClose className='close_btn'/>
         </div>
         <ul className="navbar-nav mr-auto">
           <li onClick={()=>setNavShow(false)}  type="button"

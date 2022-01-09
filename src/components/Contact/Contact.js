@@ -2,8 +2,7 @@ import React from "react";
 import "./Contact.css";
 import MapComponent from "./Maps";
 import PageLoading from "../Share/PageLoading";
-
-
+import { IoMdSend } from "react-icons/io";
 const Contact = () => {
   //Mouse Hover Effect
   const addClass = (event) => {
@@ -15,7 +14,7 @@ const Contact = () => {
 
   const onHandleChange = (e) => {
     if (e.target.value) {
-      if(e.target.className !== `input_form focus`){
+      if (e.target.className !== `input_form focus`) {
         e.target.className += ` focus`;
       }
     } else {
@@ -24,9 +23,8 @@ const Contact = () => {
   };
   return (
     <div className="home_page about ">
-      <PageLoading/>
+      <PageLoading />
       <div className="home_main_text contact">
-      
         <div className="main_text about_me_main contact_box">
           <h1 className="main_heading_title">
             <span onMouseEnter={(e) => addClass(e)} className="blast">
@@ -119,9 +117,14 @@ const Contact = () => {
                 htmlFor="textarea"
               ></label>
             </div>
+            <div className='btn_div'>
+
+            <button className="contactMeBtn " type="submit">
+              Send <IoMdSend/>
+            </button>
+            </div>
           </form>
         </div>
-      
       </div>
       <div className="home_logo map_section">
         <div className="info_map">

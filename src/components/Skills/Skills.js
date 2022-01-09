@@ -1,22 +1,23 @@
 import React, { useEffect } from "react";
 import TagCanvus from "../../Effect/TagCanvus";
-import PageLoading from "../Share/PageLoading";
 import "./Skills.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import TitleEffect from "../../Effect/TitleEffect";
+import PageLoading from "../Share/PageLoading";
 
 const Skills = () => {
-
   useEffect(() => {
-    setTimeout(() => {
+   
+    const timerdark = setTimeout(() => {
       toast.dark("Scroll to Zoom In/Out");
     }, 1500);
-  }, []);
+    return () => clearTimeout(timerdark);
+  },);
 
   return (
     <div className="home_page skill">
-      <PageLoading/>
+      <PageLoading />
       <div className="home_main_text skill_section">
         {/* <div className="body_tag top">
           <p className="body_text">&lt;html&gt;</p>
@@ -25,8 +26,6 @@ const Skills = () => {
         </div> */}
         <div className="main_text skill_main_text">
           {/* <p className="h1_tag mt-5">&lt;h1&gt;</p> */}
-
-         
           <TitleEffect
             h1={<span className="body_text ml-3">&lt;/h1&gt;</span>}
             title={[
@@ -49,7 +48,7 @@ const Skills = () => {
               "c",
               "e",
             ]}
-            sectinoName='skill_title'
+            sectinoName="skill_title"
           />
 
           <p

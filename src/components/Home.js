@@ -21,12 +21,12 @@ const Home = () => {
 
   return (
     <div className="home_page home">
-      <PageLoading />
+<PageLoading/>
       <div className="home_main_text ">
         <div className="main_text home">
           {/* <p className="h1_tag mt-5">&lt;h1&gt;</p> */}
           <h1 className="main_heading_title">
-            <div className="d-flex">
+            <div className="d-flex z-index-100">
               <span onMouseEnter={(e) => addClass(e)} className="colorWhite">
                 H
               </span>
@@ -37,7 +37,7 @@ const Home = () => {
                 ,
               </span>
             </div>
-            <div className="d-flex">
+            <div className="d-flex z-index-100">
               <span onMouseEnter={(e) => addClass(e)} className="colorWhite">
                 I
               </span>
@@ -80,7 +80,7 @@ const Home = () => {
                 d
               </span>
             </div>
-            <div className="d-flex">
+            <div className="d-flex z-index-100">
               <span onMouseEnter={(e) => addClass(e)} className="colorWhite">
                 w
               </span>

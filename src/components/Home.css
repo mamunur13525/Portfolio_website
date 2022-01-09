@@ -13,7 +13,7 @@
   align-items: center;
 }
 
-.body_tag{
+.body_tag {
   color: gray;
   font-weight: normal;
   font-family: "La Belle Aurore", cursive !important;
@@ -21,7 +21,7 @@
   font-size: 1.3rem;
   color: #947f0a;
 }
-.body_text{
+.body_text {
   color: #947f0a;
   font-family: "La Belle Aurore", cursive !important;
   font-size: 1.3rem;
@@ -37,7 +37,7 @@
 .sub_title {
   color: gray;
   letter-spacing: 3px;
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 1.1rem;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -67,19 +67,18 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
-  width:50%
+  width: 50%;
 }
 .main_text {
   width: 100%;
   position: relative;
-  
 }
 
 .home_logo {
   width: 40%;
   margin-right: 8%;
   transform: rotate(2deg);
-  height:97vh;
+  height: 97vh;
   overflow: hidden;
   display: grid;
   place-items: center;
@@ -88,39 +87,51 @@
 .home_logo img {
   width: 100%;
 }
-.top{
+.top {
   top: 2rem;
   left: 6%;
 }
-.bottom{
+.bottom {
   bottom: 0;
   left: 6%;
 }
 h1.main_heading_title::before {
-  content: '<h1>';
+  content: "<h1>";
   position: absolute;
   top: -2rem;
-  left:-1rem;
+  left: -1rem;
   font-size: 1.4rem;
   color: #947f0a;
   font-family: "La Belle Aurore", cursive !important;
   font-size: 1.3rem;
   font-weight: normal;
 }
-.colorWhite{
+.colorWhite {
   color: white;
   cursor: default;
 }
-.colorWhite:hover{
-  color: orange!important;
+.colorWhite:hover {
+  color: orange !important;
 }
-.home::after{ content: 'HOME';}
-.about::after{ content: 'ABOUT';}
-.skill::after{ content: 'SKILLS';}
-.tips::after{ content: 'TIPS';}
-.contact::after{ content: 'CONTACT';}
-.home::after,.about::after,.skill::after,.tips::after{
- 
+.home::after {
+  content: "HOME";
+}
+.about::after {
+  content: "ABOUT";
+}
+.skill::after {
+  content: "SKILLS";
+}
+.tips::after {
+  content: "TIPS";
+}
+.contact::after {
+  content: "CONTACT";
+}
+.home::after,
+.about::after,
+.skill::after,
+.tips::after {
   color: #ffffff0a;
   position: fixed;
   bottom: -145px;
@@ -132,87 +143,90 @@ h1.main_heading_title::before {
   width: fit-content;
   vertical-align: middle;
 }
-
+.z-index1000 {
+  position: relative;
+  z-index: 1000;
+}
+.z-index-100{
+  position:relative;
+  z-index: 101;
+}
 @media (max-width: 992px) {
-  .home_page{
+  .home_page {
     height: auto;
-    flex-direction: column!important;
-    align-items:start;
+    flex-direction: column !important;
+    align-items: start;
     margin-top: 3.6rem;
-   
   }
-  .home_main_text{
+  .home_main_text {
     width: 90%;
     margin: 5rem auto 0rem;
     height: 100%;
   }
-  .landing_logo{
+  .landing_logo {
     position: absolute;
     bottom: 0px;
     width: 80%;
   }
-  .home_logo{
+  .home_logo {
     width: 60%;
     transform: rotate(0deg);
     padding-bottom: 2rem;
-    height:auto;
+    height: auto;
   }
-  .main_text.home{
+  .main_text.home {
     position: absolute;
-    top:32%;
+    top: 32%;
     left: 0;
     width: auto;
   }
-  h1.main_heading_title{
+  h1.main_heading_title {
     margin-bottom: 1rem;
+    position: relative;
+    z-index: 1002;
   }
-  .contactMeBtn{
+  .contactMeBtn {
     display: none;
   }
-  .navbar{
+  .navbar {
     position: fixed;
     top: 0;
     width: 100%;
   }
-  .top{
-  
+  .top {
     left: 0;
   }
-  .bottom{
-   
+  .bottom {
     left: 0;
   }
 }
 @media (max-width: 767px) {
-  .home_logo{
+  .home_logo {
     width: 100%;
-}}
+  }
+}
 @media (max-width: 600px) {
-  h1.main_heading_title{
+  h1.main_heading_title {
     font-size: 3rem;
   }
 }
 @media (max-width: 535px) {
-  h1.main_heading_title{
+  h1.main_heading_title {
     font-size: 2.5rem;
   }
-
 }
 @media (max-width: 425px) {
-  h1.main_heading_title{
+  h1.main_heading_title {
     font-size: 2.2rem;
   }
-
 }
 @media (max-width: 360px) {
-  h1.main_heading_title{
+  h1.main_heading_title {
     font-size: 2rem;
   }
-
 }
 @media (max-width: 334px) {
-  h1.main_heading_title{
+  h1.main_heading_title {
     font-size: 1.7rem;
   }
-
 }

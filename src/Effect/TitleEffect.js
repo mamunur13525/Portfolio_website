@@ -1,6 +1,6 @@
 import React from "react";
 
-const TitleEffect = ({ title, h1, sectinoName='' }) => {
+const TitleEffect = ({ title, h1, sectinoName = "" }) => {
   //Mouse Hover Effect
   const addClass = (event) => {
     event.target.className += ` rabber_band`;
@@ -12,20 +12,17 @@ const TitleEffect = ({ title, h1, sectinoName='' }) => {
   return (
     <h1 className={`main_heading_title ${sectinoName}`}>
       {title.map((item, idx) => (
-        <span key={idx} onMouseEnter={(e) => addClass(e)} className="blast">
-          
-          {
-              item === ''&&  '\u00A0'
-          }
-          {
-              item === '<br/>' ? <br/> : item
-          }
+        <span
+          key={Math.random()}
+          onMouseEnter={(e) => addClass(e)}
+          className="blast"
+        >
+          {item === "" && "\u00A0"}
+          {item === "<br/>" ? <br /> : item}
         </span>
       ))}
-     &nbsp;
-      {
-          h1
-      }
+      &nbsp;
+      {h1}
     </h1>
   );
 };

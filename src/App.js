@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Sidebar from "./components/Share/Sidebar";
-import PageLoading from "./components/Share/PageLoading";
+// import PageLoading from "./components/Share/PageLoading";
 import Routes from "./Routes";
 import { BrowserRouter as Router } from "react-router-dom";
 

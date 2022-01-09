@@ -7,6 +7,7 @@ import Tips from "./components/Tips/Tips";
 import Contact from "./components/Contact/Contact";
 import Projects from "./components/Projects/Projects";
 
+
 const Routes = () => {
   return (
     <Switch>

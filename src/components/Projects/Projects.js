@@ -13,31 +13,52 @@ import { IoMdClose } from 'react-icons/io';
 
 const menuBar = [
   {
-    id: 1,
-    name: 'React'
+    id: 0,
+    name: 'All',
+    category: 'all'
   },
   {
+    id: 0,
+    name: 'e-commerce',
+    category: 'e-commerce'
+  },
+  {
+    id: 1,
+    name: 'admin dashboard',
+    category: 'admin_dashboard'
+  },
+
+  {
     id: 2,
-    name: 'Javscript'
+    name: 'live chat',
+    category: 'live_chat'
   },
   {
     id: 3,
-    name: 'MongoDB'
+    name: 'blogs',
+    category: 'blogs'
   },
   {
     id: 4,
-    name: 'HTML'
+    name: 'movies',
+    category: 'movies'
   },
   {
     id: 5,
-    name: 'CSS'
+    name: 'agency',
+    category: 'agency'
+  },
+  {
+    id: 6,
+    name: 'portfolio',
+    category: 'portfolio'
   },
 ]
 
 const Projects = () => {
-
-  const [activeMenu, setActiveMenu] = useState(menuBar[0]?.name || '');
+  const [activeMenu, setActiveMenu] = useState(menuBar[0]?.category || '');
   const [videoOn, setVideoOn] = useState({ status: false, url: '' });
+  const [filterData, setFilterData] = useState([]);
   const ref = useRef()
 
   //Toast End Timeout
@@ -46,7 +67,7 @@ const Projects = () => {
       toast.dark("Click to Full Details");
     }, 500);
     return () => clearTimeout(timer);
-  });
+  }, []);
 
 
   //click outside to close div
@@ -63,7 +84,18 @@ const Projects = () => {
     }
   }, [videoOn.status])
 
-
+  useEffect(() => {
+    console.log(activeMenu)
+    if (activeMenu !== '') {
+      let filter = [];
+      if (activeMenu === 'all') {
+        filter = fakeData;
+      } else {
+        filter = fakeData.filter(item => item.category === activeMenu)
+      }
+      setFilterData([...filter])
+    }
+  }, [activeMenu])
 
   return (
     <div style={{ height: "100%" }} className="home_page projects">
@@ -80,7 +112,7 @@ const Projects = () => {
             <ul className="d-flex">
               {
                 menuBar.map(menu => (
-                  <li onClick={() => setActiveMenu(menu.name)} key={menu.id} className={`btn-category ${activeMenu === menu.name ? 'active' : ''}`}>{menu.name}</li>
+                  <li onClick={() => setActiveMenu(menu.category)} key={menu.id} className={`btn-category ${activeMenu === menu.category ? 'active' : ''}`}>{menu.name}</li>
                 ))
               }
             </ul>
@@ -98,9 +130,14 @@ const Projects = () => {
           </div>
         }
         <div className="row m-auto mt-3">
-          {fakeData.map((item, ind) => (
-            <Project setVideoOn={setVideoOn} key={ind} item={item} />
-          ))}
+          {
+            filterData?.length ?
+              filterData.map((item, ind) => (
+                <Project setVideoOn={setVideoOn} key={ind} item={item} />
+              ))
+              :
+              <p>No Data Foud!</p>
+          }
         </div>
       </div>
       <ToastContainer
@@ -124,7 +161,7 @@ export default Projects;
 
 const Project = ({ setVideoOn, item }) => {
   if (item) return (
-    <div className="col-md-4">
+    <div className="col-md-4 animate__animated animate__fadeInUp">
       <div className="single_project">
         <p className="category_name">{item.category}</p>
         <h3 className="font-weight-bold">{item.title}</h3>

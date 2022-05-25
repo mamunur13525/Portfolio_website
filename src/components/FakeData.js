@@ -9,6 +9,7 @@ import portfolio from '../image/works/portfolio.png';
 import dashboard from '../image/works/dashboard.png';
 import fruitsECommerce from '../image/works/fruits-e-commerce.png';
 import fruitsECommerceFull from '../image/works/fruits-e-commerce-full.png';
+import chatApp from '../image/works/chart.png';
 
 
 export const fakeData = [
@@ -23,6 +24,27 @@ export const fakeData = [
     category: 'e-commerce',
     technology_used: [
       "NextJS",
+      "React",
+      "MongoDB",
+      "Node.js",
+      "Express",
+      "HTML5",
+      "CSS3",
+    ],
+    details:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo dicta a reiciendis quisquam blanditiis voluptate culpa sint saepe doloribus? Sint repudiandae enim praesentium dignissimos veniam soluta laboriosam temporibus nobis explicabo.",
+  },
+  {
+    title: "Messageing App",
+    sub_title: "This website for messaging multiple  person.",
+    live_link: "https://chat-my.netlify.app",
+    github_Link: [{ title: 'Frontend Code', url: "https://github.com/mamunur13525/My-Chat-App" }],
+    thumbail_image: chatApp,
+    full_photo: chatApp,
+    images: "https://source.unsplash.com/aJeH0KcFkuc/400x300",
+    category: 'live_chat',
+    technology_used: [
+      "Socket.io",
       "React",
       "MongoDB",
       "Node.js",

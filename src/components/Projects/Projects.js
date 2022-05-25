@@ -105,7 +105,7 @@ const Projects = () => {
           <TitleEffect
             h1={""}
             title={["P", "r", "o", "j", "e", "c", "t", "s"]}
-          />
+          /> 
         </div>
         <div>
           <div className="row m-auto mt-5">

@@ -5,7 +5,9 @@ import Sidebar from "./components/Share/Sidebar";
 import Routes from "./Routes";
 import { BrowserRouter as Router } from "react-router-dom";
 
+
 function App() {
+
   return (
     <Router>
       <Sidebar />

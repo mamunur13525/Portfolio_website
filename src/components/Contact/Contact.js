@@ -1,7 +1,6 @@
 import React from "react";
 import "./Contact.css";
 import MapComponent from "./Maps";
-import PageLoading from "../Share/PageLoading";
 import { IoMdSend } from "react-icons/io";
 const Contact = () => {
   //Mouse Hover Effect
@@ -23,7 +22,6 @@ const Contact = () => {
   };
   return (
     <div className="home_page about ">
-      <PageLoading />
       <div className="home_main_text contact">
         <div className="main_text about_me_main contact_box">
           <h1 className="main_heading_title">

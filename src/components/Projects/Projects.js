@@ -18,38 +18,38 @@ const menuBar = [
     category: 'all'
   },
   {
-    id: 0,
+    id: 1,
     name: 'e-commerce',
     category: 'e-commerce'
   },
   {
-    id: 1,
+    id: 2,
     name: 'admin dashboard',
     category: 'admin_dashboard'
   },
 
   {
-    id: 2,
+    id: 3,
     name: 'live chat',
     category: 'live_chat'
   },
   {
-    id: 3,
+    id: 4,
     name: 'blogs',
     category: 'blogs'
   },
   {
-    id: 4,
+    id: 5,
     name: 'movies',
     category: 'movies'
   },
   {
-    id: 5,
+    id: 6,
     name: 'agency',
     category: 'agency'
   },
   {
-    id: 6,
+    id: 7,
     name: 'portfolio',
     category: 'portfolio'
   },
@@ -85,7 +85,7 @@ const Projects = () => {
   }, [videoOn.status])
 
   useEffect(() => {
-    console.log(activeMenu)
+  
     if (activeMenu !== '') {
       let filter = [];
       if (activeMenu === 'all') {
@@ -99,17 +99,16 @@ const Projects = () => {
 
   return (
     <div style={{ height: "100%" }} className="home_page projects">
-      <PageLoading />
       <div className="project_div">
         <div className="projects_title">
           <TitleEffect
             h1={""}
-            title={["P", "r", "o", "j", "e", "c", "t", "s"]}
-          /> 
+            title="Projects"
+          />
         </div>
         <div>
           <div className="row m-auto mt-5">
-            <ul className="d-flex">
+            <ul className="d-flex category_ul">
               {
                 menuBar.map(menu => (
                   <li onClick={() => setActiveMenu(menu.category)} key={menu.id} className={`btn-category ${activeMenu === menu.category ? 'active' : ''}`}>{menu.name}</li>
@@ -160,48 +159,52 @@ export default Projects;
 
 
 const Project = ({ setVideoOn, item }) => {
+  const [hover, setHover] = useState(false)
   if (item) return (
-    <div className="col-md-4 animate__animated animate__fadeInUp">
+    <div onMouseLeave={() => setHover(false)} onMouseEnter={() => setHover(true)} style={hover ? { zIndex: 124 } : { zIndex: 0 }} className="col-md-4 animate__animated animate__fadeInUp">
       <div className="single_project">
         <p className="category_name">{item.category}</p>
         <h3 className="font-weight-bold">{item.title}</h3>
-        <p className="mb-2">{item.sub_title}</p>
-        <ul className="d-flex ">
-          {
-            item.github_Link.map((link, ind) => (
-              <li key={ind} className="link_icon">
-                <a title={link.title} href={link.url} target="blank">
-                  <FaGithub />
-                </a>
-              </li>
-            ))
-          }
-          <li className="link_icon">
-            <a
-              title="Live Preview"
-              href={item.live_link}
-              target="blank"
-            >
-              <MdExitToApp />
-            </a>
-          </li>
-        </ul>
-        <ul className="ul_technology_used">
-          {item.technology_used.map((tech, ind) => (
-            <li key={ind} className="tech_name">
-              {tech},
+        <div className="project_info">
+          <p className="mb-2">{item.sub_title}</p>
+          <ul className="d-flex ">
+            {
+              item.github_Link.map((link, ind) => (
+                <li key={ind} className="link_icon">
+                  <a title={link.title} href={link.url} target="blank">
+                    <FaGithub />
+                  </a>
+                </li>
+              ))
+            }
+            <li className="link_icon">
+              <a
+                title="Live Preview"
+                href={item.live_link}
+                target="blank"
+              >
+                <MdExitToApp />
+              </a>
             </li>
-          ))}
-        </ul>
-
-        {item.thumbail_image && (
-          <div className="image_trailer_div">
-            <img className="pointer" src={item.thumbail_image} alt="thumbnail" />
-            <p onClick={() => setVideoOn({ status: true, url: 'https://www.youtube.com/watch?v=rt-2cxAiPJk' })} className="project_trailer">
-              <AiOutlineEye style={{ fontSize: '1.5rem', marginRight: '.4rem' }} />
-              View Project Trailer</p>
-          </div>
-        )}
+          </ul>
+          <ul className="ul_technology_used">
+            {item.technology_used.map((tech, ind) => (
+              <li key={ind} className="tech_name">
+                {tech},
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div style={{ position: 'relative', height: '250px' }}>
+          {item.thumbail_image && (
+            <div className="image_trailer_div">
+              <img className="pointer" src={item.thumbail_image} alt="thumbnail" />
+              <p onClick={() => setVideoOn({ status: true, url: 'https://www.youtube.com/watch?v=rt-2cxAiPJk' })} className="project_trailer">
+                <AiOutlineEye style={{ fontSize: '1.5rem', marginRight: '.4rem' }} />
+                View Project Trailer</p>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   )

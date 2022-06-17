@@ -181,7 +181,7 @@ h1.main_heading_title::before {
     width: auto;
   }
   h1.main_heading_title {
-    margin-bottom: 1rem;
+
     position: relative;
     z-index: 1002;
   }
@@ -192,6 +192,7 @@ h1.main_heading_title::before {
     position: fixed;
     top: 0;
     width: 100%;
+    height: 3.7rem;
   }
   .top {
     left: 0;

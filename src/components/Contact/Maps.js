@@ -27,7 +27,7 @@ function MapComponent() {
   // const onUnmount = React.useCallback(function callback(map) {
   //   setMap(null);
   // }, []);
-  console.log({ center });
+
   return isLoaded ? (
     <GoogleMap
       center={center}

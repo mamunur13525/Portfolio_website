@@ -2,7 +2,7 @@ import React from "react";
 import './BoxRotate.css';
 import js from '../image/js.png'
 import html from '../image/htmlFull.png'
-import css from '../image/css.svg'
+import css from '../image/css.png'
 import react from '../image/react.png'
 import redux from '../image/redux.png'
 import ts from '../image/ts.png'

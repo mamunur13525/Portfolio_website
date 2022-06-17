@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import "./Sidebar.css";
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
@@ -11,22 +11,21 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import TwitterIcon from "@material-ui/icons/Twitter";
-import logo from "../../image/logo.PNG";  
+import logo from "../../image/logo.PNG";
 import { IoClose } from "react-icons/io5";
 
 
 const Sidebar = () => {
-  const [ navShow, setNavShow ] = useState(false)
+  const [navShow, setNavShow] = useState(false)
   const { push } = useHistory();
   const { pathname } = useLocation();
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link to="/home" className="navbar-brand text-light">
         <img className="brand_image" src={logo} alt="logo" />
-        <span className='sidebar_title'>Mamun</span>
       </Link>
       <button
-      onClick={()=>setNavShow((prev)=> !prev)}
+        onClick={() => setNavShow((prev) => !prev)}
         className="navbar-toggler ml-auto custom-toggler"
         type="button"
       >
@@ -34,56 +33,56 @@ const Sidebar = () => {
       </button>
 
       <div className={navShow ? "navbar-collapse show_nav" : "navbar-collapse  hide_nav"} >
-        <div onClick={()=>setNavShow(false)} className='close_icon'>
-          <IoClose className='close_btn'/>
+        <div onClick={() => setNavShow(false)} className='close_icon'>
+          <IoClose className='close_btn' />
         </div>
         <ul className="navbar-nav mr-auto">
-          <li onClick={()=>setNavShow(false)}  type="button"
-       className="nav-item active">
+          <li onClick={() => setNavShow(false)} type="button"
+            className="nav-item active">
             <div onClick={() => push("/home")} className="icon_name_div">
-              <HomeOutlinedIcon className={pathname === '/home' || pathname === '/' ?"sidebar_icon active" :"sidebar_icon"} />
-              <p className="nav-link">Home</p>
+              <HomeOutlinedIcon className={pathname === '/home' || pathname === '/' ? "sidebar_icon active" : "sidebar_icon"} />
+              <p className={`nav-link ${pathname === '/home' ? 'active' : ''}`}>Home</p>
             </div>
           </li>
-          <li onClick={()=>setNavShow(false)}  type="button"
-        className="nav-item">
-            <div onClick={()=>push('/about')} className="icon_name_div">
-              <PersonOutlineIcon className={pathname === '/about' ? "sidebar_icon active" :"sidebar_icon"}  />
-              <p className="nav-link" >
+          <li onClick={() => setNavShow(false)} type="button"
+            className="nav-item">
+            <div onClick={() => push('/about')} className="icon_name_div">
+              <PersonOutlineIcon className={pathname === '/about' ? "sidebar_icon active" : "sidebar_icon"} />
+              <p className={`nav-link ${pathname === '/about' ? 'active' : ''}`} >
                 About
               </p>
             </div>
           </li>
-          <li onClick={()=>setNavShow(false)}  type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent" className="nav-item">
-            <div onClick={()=>push('/skills')} className="icon_name_div">
-              <SettingsOutlinedIcon className={pathname === '/skills' ? "sidebar_icon active" :"sidebar_icon"} />
-              <p className="nav-link" >
+          <li onClick={() => setNavShow(false)} type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent" className="nav-item">
+            <div onClick={() => push('/skills')} className="icon_name_div">
+              <SettingsOutlinedIcon className={pathname === '/skills' ? "sidebar_icon active" : "sidebar_icon"} />
+              <p className={`nav-link ${pathname === '/skills' ? 'active' : ''}`} >
                 Skills
               </p>
             </div>
           </li>
-          <li onClick={()=>setNavShow(false)} className="nav-item">
-            <div onClick={()=>push('/tips')} className="icon_name_div">
-              <WbIncandescentOutlinedIcon className={pathname === '/tips' ? "sidebar_icon active" :"sidebar_icon"} />
-              <p className="nav-link" >
+          <li onClick={() => setNavShow(false)} className="nav-item">
+            <div onClick={() => push('/tips')} className="icon_name_div">
+              <WbIncandescentOutlinedIcon className={pathname === '/tips' ? "sidebar_icon active" : "sidebar_icon"} />
+              <p className={`nav-link ${pathname === '/tips' ? 'active' : ''}`}>
                 Tips
               </p>
             </div>
           </li>
-          <li  onClick={()=>setNavShow(false)} className="nav-item">
-            <div onClick={()=>push('/projects')} className="icon_name_div">
-              <VisibilityOutlinedIcon className={pathname === '/projects' ? "sidebar_icon active" :"sidebar_icon"} />
-              <p className="nav-link" >
+          <li onClick={() => setNavShow(false)} className="nav-item">
+            <div onClick={() => push('/projects')} className="icon_name_div">
+              <VisibilityOutlinedIcon className={pathname === '/projects' ? "sidebar_icon active" : "sidebar_icon"} />
+              <p className={`nav-link ${pathname === '/projects' ? 'active' : ''}`} >
                 Projects
               </p>
             </div>
           </li>
-          <li onClick={()=>setNavShow(false)} className="nav-item">
-            <div onClick={()=>push('/contact')} className="icon_name_div">
-              <EmailOutlinedIcon className={pathname === '/contact' ? "sidebar_icon active" :"sidebar_icon"} />
-              <p className="nav-link" >
+          <li onClick={() => setNavShow(false)} className="nav-item">
+            <div onClick={() => push('/contact')} className="icon_name_div">
+              <EmailOutlinedIcon className={pathname === '/contact' ? "sidebar_icon active" : "sidebar_icon"} />
+              <p className={`nav-link ${pathname === '/contact' ? 'active' : ''}`}>
                 Contact
               </p>
             </div>

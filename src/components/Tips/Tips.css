@@ -5,12 +5,12 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 2rem;
 }
 .technology_icon {
   width: 100px;
   transition: transform 0.3s;
-  margin-right: 2rem;
-  cursor: pointer;
 }
 .technology_icon.css {
   width: 98px;
@@ -18,24 +18,42 @@
 .technology_icon.mongodb {
   width: 130px;
 }
-.technology_icon:hover {
-  transform: scale(1.3);
-}
+
 .tip_section {
   width: 100%;
 }
 .tip_main_text {
   width: 100%;
 }
+.tech_div {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(85, 85, 85, 0.297);
+  color: white;
+  width: 150px;
+  height: 170px;
+  border-radius: 2px;
+  cursor:pointer;
+}
+.tech_div:hover .technology_icon {
+  transform: scale(1.2);
+}
+.tech_div p {
+  text-align: center;
+  margin: 0px;
+}
 @media (max-width: 992px) {
+  .icon {
+    justify-content: space-evenly;
+  }
   .tip_section {
     width: 90%;
   }
-  .technology_icon {
-  }
-  .tech_div{
-    width: 130px;
-    margin: 2rem auto;
 
+  .tech_div {
+    width: 130px;
   }
 }

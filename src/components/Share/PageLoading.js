@@ -16,7 +16,7 @@ const PageLoading = () => {
     >
       <div className="page_loading_content_box">
         <img className="page_load_logo" src={logo} alt="logo" />
-        <p className="page_load_title">Mamun Ahmed</p>
+       
         <p className="page_load_sub_title">Mamun is working</p>
         <div className="progress">
           <div className="progress">

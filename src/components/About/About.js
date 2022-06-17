@@ -4,18 +4,16 @@ import BoxRotate from "../BoxRotate";
 import "animate.css";
 import Particale from "../../Effect/Particale";
 import TitleEffect from "../../Effect/TitleEffect";
-import PageLoading from "../Share/PageLoading";
 const About = () => {
   return (
     <div className="home_page about">
-      <PageLoading />
       <div className="home_main_text about_me">
         <div className="main_text about_me_main">
           {/* <p className="h1_tag mt-5">&lt;h1&gt;</p> */}
 
           <TitleEffect
             h1={<span className="body_text ml-3">&lt;/h1&gt;</span>}
-            title={["A", "b", "o", "u", "t"]}
+            title="About"
             sectinoName="about_title"
           />
 

@@ -7,6 +7,17 @@
   align-items: flex-start;
   justify-content: flex-start;
 }
+.col-md-4 {
+  position: relative;
+  min-width: 370px;
+  height: 400px;
+  transition: all .4s;
+}
+.category_ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
 .single_project {
   padding: 1rem 1rem 1.5rem;
   position: relativee;
@@ -17,6 +28,18 @@
   box-shadow: 0 2px 4px -1px rgb(0 0 0 / 20%), 0 4px 5px 0 rgb(0 0 0 / 14%),
     0 1px 10px 0 rgb(0 0 0 / 12%);
   border-top: 2px solid #ffa500;
+}
+.col-md-4:hover .project_info {
+  height: 150px;
+}
+.col-md-4:hover .image_trailer_div {
+  position: absolute;
+  left: 0rem;
+  z-index: 12;
+}
+.project_info {
+  height: 0px;
+  transition: all 0.4s;
 }
 .category_name {
   color: orange;
@@ -49,7 +72,6 @@ ul {
   border: 2px solid #ffa500;
   color: hsla(0, 0%, 100%, 0.85);
   padding: 5px 25px;
-  margin-right: 15px;
   cursor: pointer;
   border-radius: 4px;
   text-transform: uppercase;
@@ -81,6 +103,7 @@ ul {
 .image_trailer_div {
   position: relative;
   overflow: hidden;
+  transition: all 0.4s;
 }
 .project_trailer {
   color: white;

@@ -1,6 +1,4 @@
-.skill_title{
-  margin-bottom: 2rem;
-}
+
 .tech_name {
   color: #FFA500;
 }
@@ -13,7 +11,17 @@
   transform: rotate(0);
   z-index: 12;
 }
-
+div.skill_title{
+  margin-bottom: 2rem;
+}
+.skills_{
+  display: flex;
+  flex-wrap: wrap;
+}
+.about_sub_title{
+  width: 100%;
+  
+}
 @media (max-width: 992px) {
   .tag_canvus_ {
     padding: 2rem;

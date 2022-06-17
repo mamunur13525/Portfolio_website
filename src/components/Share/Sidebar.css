@@ -7,9 +7,10 @@
   position: fixed;
   left: 0;
   z-index: 2000;
+  padding-top: 1rem;
 }
 .brand_image {
-  width: 20px;
+  width: 30px;
 }
 .sidebar_title {
   font-size: 1rem;
@@ -108,6 +109,10 @@ ul.social_icon_ul li a {
 .sidebar_icon.active {
   color: #ffd700;
 }
+.nav-link.active {
+  color: #ffd700 !important;
+  transform: scaleY(1.2);
+}
 p.nav-link {
   position: absolute;
   margin-bottom: 0;
@@ -123,7 +128,7 @@ p.nav-link {
   font-size: 2rem;
   color: gray;
 }
-.close_btn:hover{
+.close_btn:hover {
   color: yellow;
 }
 @media (max-width: 992px) {
